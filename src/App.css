@@ -24,7 +24,7 @@
     grid-template-areas: 
       "sidebar header header"
       "sidebar main main"
-      "footer footer footer";
+      "footer main main";
   }
 }
 
