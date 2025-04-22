@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    text-align: center;   
+    justify-content: space-between;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.header__title {
+    margin: 2rem;
+}
+
+.header__title--text {
+    margin: 0;
+    white-space: nowrap;
+}
+  
+.header__nav--list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 2rem;
+    padding: 0;
+}
+  
+.header__nav--item {
+    cursor: pointer;
+    font-weight: 500;
+}
+  
