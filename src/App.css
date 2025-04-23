@@ -44,4 +44,6 @@
   grid-area: main;
   background-color: #1e1e1e;
   border-radius: 1rem;
+  width: 100vh;
+  height: 70vh;
 }

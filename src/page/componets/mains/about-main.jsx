@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const AboutMain = () => {
   return (
     <div className="about-main">
