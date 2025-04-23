@@ -1,30 +1,89 @@
-.header {
-    display: flex;
-    text-align: center;   
-    justify-content: space-between;
-    font-size: 1.5rem;
+header {
     width: 100%;
+    display: flex; 
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .header__title {
-    margin: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
 }
 
 .header__title--text {
-    margin: 0;
-    white-space: nowrap;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom:0;
 }
-  
-.header__nav--list {
-    list-style: none;
+
+.header__nav {
     display: flex;
-    gap: 1rem;
-    margin: 2rem;
+    align-items: flex-start; 
+    justify-content: flex-end;
+    width: auto;
+}
+
+.header__nav--list {
+    display: flex;
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
-  
-.header__nav--item {
+
+.header__nav--button1 {
+    background-color: rgb(44, 43, 43); 
+    color: #ffffff; 
+    border: none;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border-radius: 0% 0% 0% 1rem;
 }
-  
+
+.header__nav--button2 {
+    background-color: rgb(44, 43, 43); 
+    color: #ffffff; 
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.header__nav--button3 {
+    background-color: rgb(44, 43, 43); 
+    color: #ffffff; 
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.header__nav--button4 {
+    background-color: rgb(44, 43, 43); 
+    color: #ffffff; 
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border-radius: 0% 1rem 0% 0%;
+}
+
+.header__nav--button:hover {
+    background-color: #555555;
+}
+.underline {
+    width: 50%;
+    height: 2px;
+    background-color: white;
+    margin-top:0;
+}
+
