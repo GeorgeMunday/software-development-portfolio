@@ -13,3 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+  height: 99%;
+  font-size: 100%;
+  line-height: 1.5;
+}
