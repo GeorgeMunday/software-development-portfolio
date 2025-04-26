@@ -1,10 +1,11 @@
 import React from "react";
 
+import Carousel from "./portfolio-components/carousel.jsx";
+
 const Portfolio = () => {
     return (
         <div className="portfolio-main">
-            <h1>Portfolio</h1>
-            <p>This is the Portfolio page content.</p>
+            <Carousel />
         </div>
     );
 };
