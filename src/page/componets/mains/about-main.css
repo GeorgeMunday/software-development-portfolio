@@ -1,4 +1,34 @@
-.about-main{
-    width: 100%;
-    height: 100%;
+.about-main__description{
+    margin-left: 1rem;
+}
+
+
+.about-main__description__work{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.about-main__work-item{
+    padding : 4rem;
+    border-radius: 1rem;
+    background-color: grey;
+    margin-top: 3rem;
+    gap: 1rem;
+    display: flex;
+}
+
+.about-main__work-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-main__work-link:hover {
+    background-color: #e0e0e0;
+    color: #000;
 }

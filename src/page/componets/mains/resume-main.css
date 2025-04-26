@@ -1,0 +1,43 @@
+.resume-main__description {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.resume-main__description__title {
+  display: flex;
+}
+.resume__list--icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.resume__main__title{
+  margin:0;
+  text-align: center;
+  color: #fff;
+  margin-left: 0.8rem;
+}
+
+
+.resume-main__description__content {
+  position: relative;
+  margin-left: 4rem;
+  border-left: rgba(255, 255, 255, 0.1) solid 0.01rem; 
+}
+
+.resume-main__description__content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: rgba(255, 255, 255,0.7); 
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+

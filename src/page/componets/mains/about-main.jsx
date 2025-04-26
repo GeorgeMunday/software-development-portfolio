@@ -1,23 +1,36 @@
 import React from "react";
 
+import "./about-main.css";
 
 const AboutMain = () => {
   return (
     <div className="about-main">
-      <h1 className="about-main__title">About Me</h1>
-      <p className="about-main__description">
-        I am a passionate web developer with a love for creating dynamic and
-        responsive web applications. My journey in web development started with
-        a curiosity to understand how websites work, and it has evolved into a
-        full-fledged career. I enjoy learning new technologies and applying them
-        to solve real-world problems.
-      </p>
-      <p className="about-main__description">
-        In my free time, I like to explore new programming languages, work on
-        personal projects, and contribute to open-source initiatives. I believe
-        in continuous learning and strive to stay updated with the latest trends
-        in the tech industry.
-      </p>
+      <div className="about-main__description">
+        <div className="about-main__description__title">
+        </div>
+        <div className="about-main__description__content">
+          <p>
+            I'm a passionate and curious developer with a love for all things digital — from web design to coding and animation. I’m currently building my skills in React.js, HTML, CSS, JavaScript, and Python, and I’m always excited to take on new challenges that push my understanding even further.
+            My journey started with a simple yet satisfying project: a cookie clicker game. That small piece of logic sparked something in me — the joy of problem-solving and creating something interactive from scratch. Since then, I’ve been on a mission to learn, build, and grow as a developer.
+            I’m aiming to become a software developer, and I bring a hardworking, engaged attitude to every project I take on. Whether I'm debugging code or designing UI, I’m always learning and always improving.
+          </p>
+        </div>
+        <h2 className="about-main__description__title">Some of my latest works</h2>
+        <div className="about-main__description__work">
+          <div className="about-main__work-item">
+            <a href="#" className="about-main__work-link">Demo</a>
+            <a href="#" className="about-main__work-link">Code</a>
+          </div>
+          <div className="about-main__work-item">
+            <a href="#" className="about-main__work-link">Demo</a>
+            <a href="#" className="about-main__work-link">Code</a>
+          </div>
+          <div className="about-main__work-item">
+            <a href="#" className="about-main__work-link">Demo</a>
+            <a href="#" className="about-main__work-link">Code</a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

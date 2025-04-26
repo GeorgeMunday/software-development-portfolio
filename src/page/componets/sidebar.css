@@ -1,10 +1,10 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: auto;
+  box-sizing: border-box;
 }
 
 .sidebar__title {
@@ -45,21 +45,22 @@
 }
 
 .sidebar__list {
+  margin-top: 2rem;
   list-style: none;
   padding: 0;
   width: 100%;
 }
 
 .sidebar__list--item-container {
-  display: flex; 
-  align-items: center; 
-  gap: 1rem; 
-  margin-bottom: 1rem; 
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .sidebar__list--icon {
-  width: 40px; 
-  height: 40px; 
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
 }
 
