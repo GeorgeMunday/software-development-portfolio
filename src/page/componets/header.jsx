@@ -1,29 +1,49 @@
 import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import './header.css';
 
 export default function Header({ currentPage, setPage }) {
-    return (
-        <header className="header">
-            <div className="header__title">
-                <h1 className="header__title--text">{currentPage}</h1>
-                <div className="underline"></div>
-            </div>
-            <nav className="header__nav">
-                <ul className="header__nav--list">
-                    <li className="header__nav--item">
-                        <button className="header__nav--button1" onClick={() => setPage('About')}>About</button>
-                    </li>
-                    <li className="header__nav--item">
-                        <button className="header__nav--button2" onClick={() => setPage('Resume')}>Resume</button>
-                    </li>
-                    <li className="header__nav--item">
-                        <button className="header__nav--button3" onClick={() => setPage('Portfolio')}>Portfolio</button>
-                    </li>
-                    <li className="header__nav--item">
-                        <button className="header__nav--button4" onClick={() => setPage('Contact')}>Contact</button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    );
+  const titleVariants = {
+    initial: { opacity: 0, y: 10 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -10 },
+  };
+
+  return (
+    <header className="header">
+      <div className="header__title">
+        <AnimatePresence mode="wait">
+          <motion.h1
+            key={currentPage}
+            className="header__title--text"
+            variants={titleVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.4, ease: 'easeInOut' }}
+          >
+            {currentPage}
+          </motion.h1>
+        </AnimatePresence>
+        <div className="underline"></div>
+      </div>
+
+      <nav className="header__nav">
+        <ul className="header__nav--list">
+          <li className="header__nav--item">
+            <button className="header__nav--button1" onClick={() => setPage('About')}>About</button>
+          </li>
+          <li className="header__nav--item">
+            <button className="header__nav--button2" onClick={() => setPage('Resume')}>Resume</button>
+          </li>
+          <li className="header__nav--item">
+            <button className="header__nav--button3" onClick={() => setPage('Portfolio')}>Portfolio</button>
+          </li>
+          <li className="header__nav--item">
+            <button className="header__nav--button4" onClick={() => setPage('Contact')}>Contact</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
 }

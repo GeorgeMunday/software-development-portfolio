@@ -46,7 +46,7 @@ const Carousel = () => {
             grabCursor={true}
             centeredSlides={true}
             slidesPerView={'auto'}
-            loop={false} // <<< prevent endless loop
+            loop={false}
             coverflowEffect={{
                 rotate: 0,
                 stretch: 0,
