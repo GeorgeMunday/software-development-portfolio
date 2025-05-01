@@ -5,7 +5,7 @@ const ContactMain = () => {
     return (
         <div className="contact-main">
             <form
-                action="https://formspree.io/f/YOUR_FORM_ID" // Replace YOUR_FORM_ID with your Formspree ID
+                action="https://formspree.io/f/YOUR_FORM_ID" 
                 method="POST"
                 className="contact-main__form"
             >
