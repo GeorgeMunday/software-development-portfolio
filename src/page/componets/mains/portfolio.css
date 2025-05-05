@@ -1,0 +1,45 @@
+/* Portfolio component styles */
+main {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.portfolio__nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio__button {
+    padding: 0.75rem 1.5rem;
+    background-color: rgb(84, 82, 82);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.portfolio__button:hover {
+    background-color: rgb(84, 82, 82);
+    transform: translateY(-2px);
+}
+
+.portfolio__button:active {
+    background-color: #aeafb0;
+    transform: translateY(0);
+}
+
+/* Main content area */
+.portfolio__content {
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    font-size: 1.1rem;
+    color: #333;
+    height:100%;
+}
