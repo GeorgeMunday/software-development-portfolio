@@ -1,8 +1,6 @@
 .contact-main {
   padding: 2rem;
-  background-color: #1e1e1e;
   border-radius: 1rem;
-  color: white;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -34,17 +32,15 @@
 .contact-main__form-group input,
 .contact-main__form-group textarea {
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  border: 1px solid #E6E9EC ;
   border-radius: 0.5rem;
-  background-color: #2c2c2c;
-  color: white;
   font-size: 1rem;
 }
 
 .contact-main__form-group input:focus,
 .contact-main__form-group textarea:focus {
   outline: none;
-  border-color: #4caf50;
+  border: 0.1rem, #0077B5 solid;
 }
 
 .contact-main__form-group textarea {
@@ -55,13 +51,12 @@
   padding: 0.75rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: #2c2c2c;
-  color: white;
   font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  background-color: #0077B5;
 }
 
 .contact-main__submit:hover {
-  background-color: #232121;
+  background-color: #E6E9EC;
 }

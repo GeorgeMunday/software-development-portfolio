@@ -19,7 +19,7 @@ const EducationMain = () => {
           <div className="resume-main__description__content">
             <ul className="resume__list">
               <li>King James</li>
-              <li>GSCE: Triple Science,Geography,Astronamy,Drama,English,Maths</li>
+              <li>GSCE: Tripl</li>
               <li>2019 - 2024</li>
               <li>Description</li>
             </ul>

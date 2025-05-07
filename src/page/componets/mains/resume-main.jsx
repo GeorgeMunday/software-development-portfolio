@@ -11,8 +11,6 @@ const ResumeMain = () => {
       <>
       <EducationMain />
       <WorkMain />
-      <WorkMain />
-      <WorkMain />
       </>
     );
 }

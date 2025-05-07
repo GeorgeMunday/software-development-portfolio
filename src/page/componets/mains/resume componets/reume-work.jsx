@@ -34,14 +34,6 @@ const WorkMain = () => {
                 <li>Description</li>
                 </ul>
             </div>
-            <div className="resume-main__description__content">
-                <ul className="resume__list">
-                <li>Cafe De Luca</li>
-                <li>Computer Science</li>
-                <li>2024 - 2026</li>
-                <li>Description</li>
-                </ul>
-            </div>
         </div>
       </div>
     );
