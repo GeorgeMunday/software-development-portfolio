@@ -28,22 +28,23 @@ const Portfolio = () => {
             case 'intro':
                 return <Cards/>;
             case 'table':
+                <TableComponent data = {Projects} />
             default:
-                return <TableComponent data = {Projects} />;
+                return <Cards/>;
         };
     };
 
     return (
         <>
             <nav className="portfolio__nav">
-                <button className="portfolio__button" onClick={() => setActiveComponent('table')}>
-                    Whole portfolio
+            <button className="portfolio__button" onClick={() => setActiveComponent('intro')}>
+                    Back end design
                 </button>
                 <button className="portfolio__button" onClick={() => setActiveComponent('carousel')}>
                     Web development
                 </button>
-                <button className="portfolio__button" onClick={() => setActiveComponent('intro')}>
-                    Back end design
+                <button className="portfolio__button" onClick={() => setActiveComponent('table')}>
+                    Whole portfolio
                 </button>
             </nav>
             <div className="portfolio__content">

@@ -4,25 +4,25 @@ import './back-end.css'
 const cards = [
   {
     title: 'Cookie clicker',
-    image: '#',
+    image: './test.png',
     demoLink: 'https://example.com/demo1',
     codeLink: 'https://github.com/example/project1',
   },
   {
     title: 'AI chat bot',
-    image: '#',
+    image: './test.png',
     demoLink: 'https://example.com/demo2',
     codeLink: 'https://github.com/example/project2',
   },
   {
     title: 'Game Landing Page',
-    image: '#',
+    image: './test.png',
     demoLink: 'https://example.com/demo3',
     codeLink: 'https://github.com/example/project3',
   },
   {
     title: 'Log in system',
-    image: '#',
+    image: './test.png',
     demoLink: 'https://example.com/demo4',
     codeLink: 'https://github.com/example/project4',
   },

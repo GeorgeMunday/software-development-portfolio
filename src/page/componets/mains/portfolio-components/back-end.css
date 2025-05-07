@@ -8,8 +8,8 @@
   
 .card {
     height: 100%;
-    background-color: #000;
-    color: #fff;
+    background-color: #0077B5;
+    color: #ffffff;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -40,11 +40,14 @@
 }
 
 .card-links a {
-    color: #00bcd4;
+    border-radius: 15%;
+    padding:0.3rem;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
 .card-links a:hover {
-    text-decoration: underline;
+    background-color: #65bae7;
+    font-weight: bold;
 }

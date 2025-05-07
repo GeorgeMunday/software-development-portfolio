@@ -4,25 +4,25 @@ import './back-end.css'
 const cards = [
   {
     title: 'Project One',
-    image: 'https://via.placeholder.com/400x200',
+    image: './test.png',
     demoLink: 'https://example.com/demo1',
     codeLink: 'https://github.com/example/project1',
   },
   {
     title: 'Project Two',
-    image: 'https://via.placeholder.com/400x200',
+    image: './test.png',
     demoLink: 'https://example.com/demo2',
     codeLink: 'https://github.com/example/project2',
   },
   {
     title: 'Project Three',
-    image: 'https://via.placeholder.com/400x200',
+    image: './test.png',
     demoLink: 'https://example.com/demo3',
     codeLink: 'https://github.com/example/project3',
   },
   {
     title: 'Project Four',
-    image: 'https://via.placeholder.com/400x200',
+    image: './test.png',
     demoLink: 'https://example.com/demo4',
     codeLink: 'https://github.com/example/project4',
   },
