@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 
-import Carousel from "./portfolio-components/carousel.jsx";
-import Intro from "./about-components/intro.jsx";
 import TableComponent from "./portfolio-components/table.jsx";
 import Cards from "./portfolio-components/back-end.jsx";
+import WebCards from "./portfolio-components/web-dev.jsx";
 
 import './portfolio.css'
 
@@ -25,7 +24,7 @@ const Portfolio = () => {
     const renderComponent = () => {
         switch (activeComponent) {
             case 'carousel':
-                return <Intro/>;
+                return <WebCards/>;
             case 'intro':
                 return <Cards/>;
             case 'table':
