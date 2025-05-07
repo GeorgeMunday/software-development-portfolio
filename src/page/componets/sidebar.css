@@ -8,8 +8,12 @@
 }
 
 .sidebar__title {
-  margin-top: 2rem;
   font-size: 1.5rem;
+  width: 100%;
+  background: linear-gradient(to bottom, #0077B5 0%, #0077B5 50%, transparent 50%, transparent 100%);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sidebar__title--text {
@@ -25,22 +29,23 @@
   color: #fff;
   text-align: center;
   padding: 0.5rem;
-  background-color: rgb(84, 82, 82);
+  background-color: 	#0077B5;
   border-radius: 0.5rem;
 }
 .sidebar__title--img {
+  margin-top: 25%;
   justify-content: center;
   align-items: center;
   display: flex;
   width: 10rem;
   height: 10rem;
-  border-radius: 10%;
+  border-radius: 50%;
 }
 
 .sidebar__main{
   width: 100%;
   margin: 1rem;
-  border-top: 0.1rem #fff solid;
+  border-top: 0.1rem #E6E9EC solid;
   width: 80%;
 }
 
@@ -75,15 +80,12 @@
 
 .sidebar__list--header {
   font-size: 0.9rem;
-  font-weight: bold;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 0.2rem; 
 }
 
 .sidebar__list--info {
   font-size: 0.85rem;
-  color: #b9bbbe; 
-  text-decoration: none;
 }
 
 .sidebar__list--text {

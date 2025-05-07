@@ -6,13 +6,13 @@ const Intro = () => {
     <div>
       <div className="about-main__description__content">
         <p>
-        I’m a passionate and curious developer with a love for all things digital, from web design to coding and animation. I’m currently building my skills in React.js, HTML, CSS, JavaScript, and Python, and I’m always excited to take on new challenges that push my understanding even further. My journey started with a simple yet satisfying project: a cookie clicker game. That small piece of logic sparked something in me .The joy of problem-solving and creating something interactive from scratch. Since then, I’ve been on a mission to learn, build, and grow as a developer.
+        I’m a passionate and curious developer with a love for all things digital — from web design to coding and animation. I’m building my skills in React.js, HTML, CSS, JavaScript, and Python, and always excited to tackle new challenges. My journey took off when I built a cookie clicker game as my first React project — a test set by Dedalus to assess my skills. That simple, interactive project sparked my enthusiasm for problem-solving and creating from scratch, and I’ve been learning and building ever since.
         </p>
         <p>
-        Outside of coding, I’m someone who thrives on both mental and physical challenges. I enjoy going to the gym to stay active and clear my mind, playing chess to sharpen my strategic thinking, and immersing myself in gaming to relax and appreciate digital creativity from a different angle. These hobbies balance my passion for technology with personal growth and fun. 
+        During my internship at Dedalus, I gained hands-on experience working on real-world projects in a collaborative, agile environment. I sharpened my skills in Git, testing, debugging, and writing clean, maintainable code, while learning to balance technical requirements with user needs. Working closely with experienced developers also strengthened my communication, teamwork, and problem-solving abilities.
         </p>
         <p>
-        I’m aiming to become a software developer, and I bring a hardworking, engaged attitude to every project I take on. Whether I’m debugging code, designing UI, or collaborating on a team, I’m always learning and always improving — both in and out of the digital space.
+        Outside of coding, I stay sharp and balanced through the gym, chess, and gaming — hobbies that keep me active, strategic, and inspired. I’m aiming to become a software developer, and I bring energy, focus, and a drive to keep improving to every project I take on.
         </p>
       </div>
     </div>
