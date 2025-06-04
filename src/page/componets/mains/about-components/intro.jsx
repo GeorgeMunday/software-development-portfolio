@@ -6,15 +6,20 @@ const Intro = () => {
     <div>
       <div className="about-main__description__content">
         <p>
-        I’m a passionate and curious developer with a love for all things digital — from web design to coding and animation. I’m building my skills in React.js, HTML, CSS, JavaScript, and Python, and always excited to tackle new challenges. My journey took off when I built a cookie clicker game as my first React project — a test set by Dedalus to assess my skills. That simple, interactive project sparked my enthusiasm for problem-solving and creating from scratch, and I’ve been learning and building ever since.
+        Hi, I’m George Munday, a passionate developer skilled in Python, pandas, and React.js, with experience in data cleaning, analysis, and building interactive apps. I’ve worked on real datasets, creating visualizations and solving complex data problems, while also developing UI components and state management with React. I’m proficient in agile development, version control with Git, debugging, and collaborating in team environments.
         </p>
-        <p>
-        During my internship at Dedalus, I gained hands-on experience working on real-world projects in a collaborative, agile environment. I sharpened my skills in Git, testing, debugging, and writing clean, maintainable code, while learning to balance technical requirements with user needs. Working closely with experienced developers also strengthened my communication, teamwork, and problem-solving abilities.
-        </p>
-        <p>
-        Outside of coding, I stay sharp and balanced through the gym, chess, and gaming — hobbies that keep me active, strategic, and inspired. I’m aiming to become a software developer, and I bring energy, focus, and a drive to keep improving to every project I take on.
-        </p>
+        <p>skills</p>
       </div>
+    <ul className= 'unsorted'>
+      <li>Python (pandas)</li>
+      <li>Data Analysis & Visualization</li>
+      <li>React.js & JavaScript</li>
+      <li>Git & Version Control</li>
+      <li>Debugging & Testing</li>
+      <li>Problem Solving & Teamwork</li>
+      <li>Agile Development</li>
+    </ul>
+    <p>Let’s connect if you're looking for a developer who thrives on problem solving and building impactful solutions.</p>
     </div>
   );
 };

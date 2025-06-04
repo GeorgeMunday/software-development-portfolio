@@ -7,6 +7,8 @@
 }
 
 .container {
+  height:80vh;
+  width:80vh;
   display: grid;
   gap: 0.5rem;
   grid-template-columns: 1fr;
@@ -46,15 +48,14 @@
 }
 
 .main {
-  border: 0.1rem, #E6E9EC, solid;
-  background-color: #ffffff;
+  border: 0.1rem solid #E6E9EC;
+  background-image: url('/background.avif'); 
+  background-size: 100% 100%; 
+  background-repeat: no-repeat;
   grid-area: main;
   border-radius: 1rem;
-  width: 100%; 
-  height: 100%; 
-  overflow-y: auto; 
   margin: 0;
-  
+  overflow-y: auto;
 }
 
 

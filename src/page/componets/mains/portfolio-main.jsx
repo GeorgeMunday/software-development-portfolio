@@ -38,13 +38,16 @@ const Portfolio = () => {
         <>
             <nav className="portfolio__nav">
             <button className="portfolio__button" onClick={() => setActiveComponent('intro')}>
-                    Back end design
+                    c#
                 </button>
                 <button className="portfolio__button" onClick={() => setActiveComponent('carousel')}>
-                    Web development
+                    python
                 </button>
                 <button className="portfolio__button" onClick={() => setActiveComponent('table')}>
-                    Whole portfolio
+                    web development
+                </button>
+                <button className="portfolio__button" onClick={() => setActiveComponent('table')}>
+                    whole portfolio
                 </button>
             </nav>
             <div className="portfolio__content">

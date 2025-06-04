@@ -10,7 +10,7 @@
 .sidebar__title {
   font-size: 1.5rem;
   width: 100%;
-  background: linear-gradient(to bottom, #0077B5 0%, #0077B5 50%, transparent 50%, transparent 100%);
+  background: linear-gradient(to bottom, #00456F 0%, #00456F 50%, transparent 50%, transparent 100%);
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +27,7 @@
   color: #fff;
   text-align: center;
   padding: 0.5rem;
-  background-color: 	#0077B5;
+  background-color: 	#00456F;
   border-radius: 0.5rem;
 }
 .sidebar__title--img {
