@@ -1,44 +1,46 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./homepage.css";
 import Page from "./pages";
 
 const Homepage = () => {
-  // Load split state from localStorage, default to false
-  const [split, setSplit] = useState(() => {
-    return localStorage.getItem("split") === "true";
-  });
+  // Set initial state based on URL hash
+  const [split, setSplit] = useState(() => window.location.hash === "#dashboard");
+  const [hasAnimated, setHasAnimated] = useState(false);
 
-  // Track if we've already animated the split
-  const hasAnimated = useRef(false);
+  // When entering dashboard, update the hash
+  const handleEnterDashboard = () => {
+    setSplit(true);
+    window.location.hash = "#dashboard";
+  };
 
-  // Save split state to localStorage whenever it changes
+  // Optional: Listen for hash changes (e.g., user manually changes hash)
   useEffect(() => {
-    localStorage.setItem("split", split);
-    // Mark animation as done after first split
-    if (split) hasAnimated.current = true;
-  }, [split]);
+    const onHashChange = () => {
+      if (window.location.hash === "#dashboard") setSplit(true);
+      else setSplit(false);
+    };
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
 
-  // If split is already true (dashboard mode), skip animation and just render Page
-  if (split && hasAnimated.current) {
+  // Use a different class when on the dashboard
+  const containerClass =
+    split && hasAnimated
+      ? "homepage__container dashboard-bg"
+      : "homepage__container";
+
+  // After animation, show only the dashboard filling the screen
+  if (split && hasAnimated) {
     return (
-      <div className="homepage__container">
-        <div
-          className="homepage__half homepage__half--left"
-          style={{ width: "100vw" }}
-        />
-        <div
-          className="homepage__half homepage__half--right"
-          style={{ width: "50vw" }}
-        >
-          <Page />
-        </div>
+      <div className={containerClass}>
+        <Page />
       </div>
     );
   }
 
   return (
-    <div className="homepage__container">
+    <div className={containerClass}>
       <AnimatePresence>
         {!split && (
           <motion.div
@@ -47,7 +49,7 @@ const Homepage = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.5 }}
-            onClick={() => setSplit(true)}
+            onClick={handleEnterDashboard}
           >
             <h1 className="homepage__title">Welcome to My Portfolio</h1>
             <p className="homepage__subtitle">
@@ -62,16 +64,17 @@ const Homepage = () => {
             <motion.div
               className="homepage__half homepage__half--left"
               initial={{ width: "100vw" }}
-              animate={{ width: "100vw" }}
-              exit={{ width: "100vw" }}
+              animate={{ width: "0vw" }}
+              exit={{ width: "0vw" }}
               transition={{ duration: 0.7, ease: "easeInOut" }}
             />
             <motion.div
               className="homepage__half homepage__half--right"
               initial={{ width: "0vw" }}
-              animate={{ width: "99vw" }}
-              exit={{ width: "0vw" }}
+              animate={{ width: "100vw" }}
+              exit={{ width: "100vw" }}
               transition={{ duration: 0.7, ease: "easeInOut" }}
+              onAnimationComplete={() => setHasAnimated(true)}
             >
               <Page />
             </motion.div>
