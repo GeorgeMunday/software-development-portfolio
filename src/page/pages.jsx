@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from './componets/header';
 import Sidebar from './componets/sidebar';
@@ -8,7 +8,15 @@ import Portfolio from './componets/mains/portfolio-main';
 import ContactMain from './componets/mains/contact-main';
 
 export default function Page() {
-  const [currentPage, setCurrentPage] = useState('About');
+  // Load from localStorage or default to 'About'
+  const [currentPage, setCurrentPage] = useState(() => {
+    return localStorage.getItem('currentPage') || 'About';
+  });
+
+  // Save to localStorage whenever currentPage changes
+  useEffect(() => {
+    localStorage.setItem('currentPage', currentPage);
+  }, [currentPage]);
 
   const renderMainContent = () => {
     switch (currentPage) {
@@ -29,8 +37,7 @@ export default function Page() {
     initial: { opacity: 0, y: 10 },
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: -10 },
-    transition: {duration: 2}
-
+    transition: { duration: 2 }
   };
 
   return (
