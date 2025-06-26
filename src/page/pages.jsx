@@ -43,8 +43,8 @@ export default function Page() {
   return (
     <div className="container">
       <Header currentPage={currentPage} setPage={setCurrentPage} />
-      <Sidebar />
       <div>
+      <Sidebar />
         <main className="main">
           <AnimatePresence mode="wait">
             <motion.div

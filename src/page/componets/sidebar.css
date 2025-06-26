@@ -1,100 +1,43 @@
+/* Sidebar Styles */
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full viewport height */
+  width: 250px; /* Adjust width as needed */
+  background-color: #303030;
+  padding: 2rem 1rem;
+  border-right: 1px solid #3a3a3a;
+  overflow-y: auto; /* Allows scrolling inside sidebar if content overflows */
+  z-index: 1000; /* Keeps it above other content */
 }
 
-.sidebar__title {
-  font-size: 1.5rem;
-  width: 100%;
-  background: linear-gradient(to bottom, #00456F 0%, #00456F 50%, transparent 50%, transparent 100%);
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .sidebar__title--text {
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 1rem;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
 }
 
 .sidebar__title--subtitle {
-  font-size: 0.8rem;
-  color: #fff;
-  text-align: center;
-  padding: 0.5rem;
-  background-color: 	#00456F;
+  background-color: #505050;
+  color: #ffffff;
+  padding: 0.4rem 0.8rem;
   border-radius: 0.5rem;
-}
-.sidebar__title--img {
-  margin-top: 25%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-}
-
-.sidebar__main{
-  width: 100%;
-  margin: 1rem;
-  border-top: 0.1rem #E6E9EC solid;
-  width: 80%;
-}
-
-.sidebar__list {
-  margin-top: 2rem;
-  list-style: none;
-  padding: 0;
-  width: 100%;
-}
-
-.sidebar__list--item-container {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.sidebar__list--icon {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-}
-
-.sidebar__list--item a:hover {
-  text-decoration: underline;
-}
-
-.sidebar__list--item--nested {
-  display: flex;
-  flex-direction: column; 
-}
-
-.sidebar__list--header {
-  font-size: 0.9rem;
-  color: #000000;
-  margin-bottom: 0.2rem; 
-}
-
-.sidebar__list--info {
   font-size: 0.85rem;
 }
 
-.sidebar__list--text {
-  font-size: 0.5rem;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  margin-bottom: 1rem;
+.sidebar__title--img {
+  margin-top: 1rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 2px solid #505050;
+  background-color: #383838;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
-ul {
-  list-style-type: none;
+.main-content {
+  padding: 2rem;
 }

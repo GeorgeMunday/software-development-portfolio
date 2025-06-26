@@ -25,7 +25,6 @@ export default function Header({ currentPage, setPage }) {
             {currentPage}
           </motion.h1>
         </AnimatePresence>
-        <div className="underline"></div>
       </div>
 
       <nav className="header__nav">
@@ -34,10 +33,10 @@ export default function Header({ currentPage, setPage }) {
             <button className="header__nav--button1" onClick={() => setPage('About')}>About</button>
           </li>
           <li className="header__nav--item">
-            <button className="header__nav--button2" onClick={() => setPage('Resume')}>Resume</button>
+            <button className="header__nav--button1" onClick={() => setPage('Resume')}>Resume</button>
           </li>
           <li className="header__nav--item">
-            <button className="header__nav--button3" onClick={() => setPage('Portfolio')}>Portfolio</button>
+            <button className="header__nav--button1" onClick={() => setPage('Portfolio')}>Portfolio</button>
           </li>
           <li className="header__nav--item">
             <button className="header__nav--button4" onClick={() => setPage('Contact')}>Contact</button>

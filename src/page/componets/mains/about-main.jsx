@@ -10,7 +10,6 @@ const AboutMain = () => {
     <div className="about-main">
       <div className="about-main__description">
         <div className="about-main__description__work">
-          <Intro />
         </div>
       </div>
     </div>

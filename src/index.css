@@ -5,18 +5,11 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgb(0, 0, 0);
-  background-color: #fdfaf5;
+  color: #B0B0B0;
+  background-color: #282828;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-html, body {
-  height: 99%;
-  font-size: 100%;
-  line-height: 1.5;
-  scrollbar-gutter: stable;
 }

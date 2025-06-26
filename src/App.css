@@ -1,61 +1,13 @@
 #root {
-  width: 100%;
-  height: 100%;
-  margin: 0 ;
+  margin: 0;
   padding: 0;
-  max-height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-  height:80vh;
-  width:80vh;
+  width: 350px;
+  height: 500px;
   display: grid;
   gap: 0.5rem;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: 
-    "header"
-    "main"
-    "sidebar";
 }
-
-@media (min-width: 1024px) {
-  .container {
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 22rem 2fr; 
-    grid-template-rows: 6.25rem 1fr; 
-    grid-template-areas: 
-      "sidebar header"
-      "sidebar main";
-  }
-}
-
-.header {
-  border: 0.1rem, #E6E9EC , solid;
-  background-color: #ffffff;
-  grid-area: header;
-  border-radius: 1rem;
-}
-
-.sidebar {
-  border: 0.1rem, #E6E9EC, solid;
-  background-color: #ffffff;
-  grid-area: sidebar;
-  border-radius: 1rem;
-  overflow: hidden; 
-  height: 100%; 
-}
-
-.main {
-  border: 0.1rem solid #E6E9EC;
-  background-image: url('/background.avif'); 
-  background-size: 100% 100%; 
-  background-repeat: no-repeat;
-  grid-area: main;
-  border-radius: 1rem;
-  margin: 0;
-  overflow-y: auto;
-}
-
-
