@@ -1,0 +1,26 @@
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.box {
+  background-color: #505050;
+  color: white;
+  padding: 6rem; /* Increased from 2rem to 6rem */
+  border-radius: 0.5rem;
+  flex: 1;
+  text-align: center;
+  min-width: 100px;
+  max-width: 300px;
+  font-size: 1.5rem; /* Increased font size */
+  box-sizing: border-box;
+}
+
+/* Optional: limit width for single-box rows */
+.row-1 .box,
+.row-4 .box {
+  max-width: 100%;
+}
+

@@ -1,59 +1,28 @@
 import React, { useState } from "react";
-
-import TableComponent from "./portfolio-components/table.jsx";
-import Cards from "./portfolio-components/back-end.jsx";
-import WebCards from "./portfolio-components/web-dev.jsx";
-
-import './portfolio.css'
-
-const Projects = [
-    {name: 1, Demo: "#", Code: "#","End Date": 13},
-    {name: 2, Demo: "#", Code: "#","End Date": 13},
-    {name: 3, Demo: "#", Code: "#","End Date": 13},
-    {name: 1, Demo: "#", Code: "#","End Date": 13},
-    {name: 2, Demo: "#", Code: "#","End Date": 13},
-    {name: 3, Demo: "#", Code: "#","End Date": 13},
-    {name: 1, Demo: "#", Code: "#","End Date": 13},
-    {name: 2, Demo: "#", Code: "#","End Date": 13},
-    {name: 3, Demo: "#", Code: "#","End Date": 13}
-];
+import "./styles/main.css"
 
 const Portfolio = () => {
-    const [activeComponent, setActiveComponent] = useState('table');
-
-    const renderComponent = () => {
-        switch (activeComponent) {
-            case 'carousel':
-                return <WebCards/>;
-            case 'intro':
-                return <Cards/>;
-            case 'table':
-                <TableComponent data = {Projects} />
-            default:
-                return <Cards/>;
-        };
-    };
-
     return (
-        <>
-            <nav className="portfolio__nav">
-            <button className="portfolio__button" onClick={() => setActiveComponent('intro')}>
-                    c#
-                </button>
-                <button className="portfolio__button" onClick={() => setActiveComponent('carousel')}>
-                    python
-                </button>
-                <button className="portfolio__button" onClick={() => setActiveComponent('table')}>
-                    web development
-                </button>
-                <button className="portfolio__button" onClick={() => setActiveComponent('table')}>
-                    whole portfolio
-                </button>
-            </nav>
-            <div className="portfolio__content">
-                {renderComponent()}
-            </div>
-        </>
+        <div class="main-content">
+      <div class="row row-1">
+        <div class="box">1</div>
+      </div>
+      <div class="row row-2">
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+      <div class="row row-3">
+        <div class="box">4</div>
+        <div class="box">5</div>
+      </div>
+      <div class="row row-4">
+        <div class="box">6</div>
+      </div>
+      <div class="row row-5">
+        <div class="box">7</div>
+        <div class="box">8</div>
+      </div>
+    </div>
     );
 };
 
