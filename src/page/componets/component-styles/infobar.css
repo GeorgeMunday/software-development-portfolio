@@ -1,0 +1,47 @@
+/* src/component-styles/infobar.css */
+.infobar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #34495e;
+    color: white;
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+.infobar.open {
+    right: 0;
+}
+
+.infobar-content {
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* src/styles/main.css */
+.info-btn {
+  padding: 8px 16px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.info-btn:hover {
+  background: #2980b9;
+}   

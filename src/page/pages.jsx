@@ -2,50 +2,111 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from './componets/header';
 import Sidebar from './componets/sidebar';
+import InfoBar from './componets/infobar';
 import AboutMain from './componets/mains/about-main';
 import ResumeMain from './componets/mains/resume-main';
 import Portfolio from './componets/mains/portfolio-main';
 import ContactMain from './componets/mains/contact-main';
 
 export default function Page() {
-  // Load from localStorage or default to 'About'
+  // Page state management
   const [currentPage, setCurrentPage] = useState(() => {
     return localStorage.getItem('currentPage') || 'About';
   });
 
-  // Save to localStorage whenever currentPage changes
+  // Sidebar states
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [sidebarContentType, setSidebarContentType] = useState('about');
+  
+  // InfoBar states
+  const [isInfoBarOpen, setIsInfoBarOpen] = useState(false);
+  const [infoType, setInfoType] = useState('');
+
+  // Persistent page state
   useEffect(() => {
     localStorage.setItem('currentPage', currentPage);
   }, [currentPage]);
 
-  const renderMainContent = () => {
-    switch (currentPage) {
-      case 'About':
-        return <AboutMain />;
-      case 'Resume':
-        return <ResumeMain />;
-      case 'Portfolio':
-        return <Portfolio />;
-      case 'Contact':
-        return <ContactMain />;
-      default:
-        return <AboutMain />;
+  // Handlers
+  const handleSidebarToggle = (type) => {
+    if (type) {
+      setSidebarContentType(type);
+      setIsSidebarOpen(true);
+    } else {
+      setIsSidebarOpen(!isSidebarOpen);
     }
   };
 
+  const handleInfoClick = (type) => {
+    setInfoType(type);
+    setIsInfoBarOpen(true);
+  };
+
+  // Page content renderer
+  const renderMainContent = () => {
+    switch (currentPage) {
+      case 'About':
+        return (
+          <AboutMain 
+            onSidebarToggle={handleSidebarToggle}
+            onInfoClick={handleInfoClick} 
+          />
+        );
+      case 'Resume':
+        return <ResumeMain onInfoClick={handleInfoClick} />;
+      case 'Portfolio':
+        return <Portfolio onInfoClick={handleInfoClick} />;
+      case 'Contact':
+        return <ContactMain onInfoClick={handleInfoClick} />;
+      default:
+        return (
+          <AboutMain 
+            onSidebarToggle={handleSidebarToggle}
+            onInfoClick={handleInfoClick} 
+          />
+        );
+    }
+  };
+
+  // Animation settings
   const pageVariants = {
     initial: { opacity: 0, y: 10 },
     animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -10 },
-    transition: { duration: 2 }
+    exit: { opacity: 0, y: -10 }
   };
 
+  // Determine CSS classes based on state
+  const mainContentClasses = [
+    'main-content',
+    isSidebarOpen ? 'sidebar-open' : '',
+    isInfoBarOpen ? 'infobar-open' : ''
+  ].filter(Boolean).join(' ');
+
   return (
-    <div className="container">
-      <Header currentPage={currentPage} setPage={setCurrentPage} />
-      <div>
-      <Sidebar />
-        <main className="main">
+    <div className="page-container">
+      <Header 
+        currentPage={currentPage} 
+        setPage={setCurrentPage} 
+        onMenuToggle={() => handleSidebarToggle()}
+      />
+      
+      <div className="content-wrapper">
+        {/* Left Sidebar */}
+        <Sidebar 
+          isOpen={isSidebarOpen} 
+          onClose={() => setIsSidebarOpen(false)}
+          contentType={sidebarContentType}
+        />
+        
+        {/* Right InfoBar */}
+        <InfoBar 
+          isOpen={isInfoBarOpen} 
+          onClose={() => setIsInfoBarOpen(false)}
+          infoType={infoType}
+        />
+        
+        {/* Main Content Area */}
+        <main className={mainContentClasses}>
           <AnimatePresence mode="wait">
             <motion.div
               key={currentPage}
@@ -53,7 +114,7 @@ export default function Page() {
               initial="initial"
               animate="animate"
               exit="exit"
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
             >
               {renderMainContent()}
             </motion.div>

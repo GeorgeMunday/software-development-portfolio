@@ -1,28 +1,44 @@
-import React, { useState } from "react";
+import React from "react";
 import "./styles/main.css"
 
-const Portfolio = () => {
+const Portfolio = ({ onInfoClick }) => {
     return (
-        <div class="main-content">
-      <div class="row row-1">
-        <div class="box">1</div>
-      </div>
-      <div class="row row-2">
-        <div class="box">2</div>
-        <div class="box">3</div>
-      </div>
-      <div class="row row-3">
-        <div class="box">4</div>
-        <div class="box">5</div>
-      </div>
-      <div class="row row-4">
-        <div class="box">6</div>
-      </div>
-      <div class="row row-5">
-        <div class="box">7</div>
-        <div class="box">8</div>
-      </div>
-    </div>
+        <div className="main-content">
+            <div className="row row-1">
+                <div className="box">
+                    <button 
+                        className="info-btn" 
+                        onClick={() => onInfoClick('portfolio1')}
+                    >
+                        E-Commerce Project
+                    </button>
+                </div>
+            </div>
+            <div className="row row-2">
+                <div className="box">
+                    <button 
+                        className="info-btn" 
+                        onClick={() => onInfoClick('portfolio2')}
+                    >
+                        Task Management App
+                    </button>
+                </div>
+                <div className="box">
+                    {/* Additional project buttons can go here */}
+                </div>
+            </div>
+            <div className="row row-3">
+                <div className="box">4</div>
+                <div className="box">5</div>
+            </div>
+            <div className="row row-4">
+                <div className="box">6</div>
+            </div>
+            <div className="row row-5">
+                <div className="box">7</div>
+                <div className="box">8</div>
+            </div>
+        </div>
     );
 };
 

@@ -1,39 +1,126 @@
-/* Sidebar Styles */
 .sidebar {
   position: fixed;
-  top: 0;
   left: 0;
-  height: 100vh; /* Full viewport height */
-  width: 250px; /* Adjust width as needed */
-  background-color: #303030;
-  padding: 2rem 1rem;
-  border-right: 1px solid #3a3a3a;
-  overflow-y: auto; /* Allows scrolling inside sidebar if content overflows */
-  z-index: 1000; /* Keeps it above other content */
+  top: 0;
+  width: 60px;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
 }
 
+.sidebar.open {
+  width: 250px;
+}
 
-.sidebar__title--text {
-  color: #e0e0e0;
+.sidebar-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.sidebar-profile {
+  padding: 20px 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-avatar {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.sidebar-name {
+  margin: 0;
   font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+  white-space: nowrap;
 }
 
-.sidebar__title--subtitle {
-  background-color: #505050;
-  color: #ffffff;
-  padding: 0.4rem 0.8rem;
-  border-radius: 0.5rem;
-  font-size: 0.85rem;
+.sidebar-title {
+  margin: 5px 0 0;
+  color: #bbb;
+  font-size: 0.9rem;
 }
 
-.sidebar__title--img {
-  margin-top: 1rem;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 50%;
-  border: 2px solid #505050;
-  background-color: #383838;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+.sidebar-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.sidebar-icon {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 5px;
+}
+
+.sidebar-icon:hover {
+  transform: scale(1.2);
+}
+
+.sidebar-content {
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100% - 180px);
+}
+
+.sidebar-section {
+  margin-bottom: 25px;
+}
+
+.sidebar-section h3 {
+  color: #3498db;
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.skill-category h4 {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  color: #ecf0f1;
+}
+
+.contact-methods {
+  margin-top: 15px;
+}
+
+.contact-methods p {
+  margin: 10px 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
 }
