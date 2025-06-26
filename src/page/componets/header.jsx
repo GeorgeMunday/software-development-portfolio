@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import './header.css';
+import "./component-styles/header.css"
 
 export default function Header({ currentPage, setPage }) {
   const titleVariants = {
