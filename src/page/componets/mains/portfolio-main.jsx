@@ -1,5 +1,10 @@
 import React from "react";
-import "./styles/main.css"
+import './styles/layout.css';
+import './styles/header-buttons.css';
+import './styles/info-section.css';
+import './styles/portfolio.css';
+import './styles/buttons.css';
+import './styles/typography.css';
 
 const projects = [
   {
