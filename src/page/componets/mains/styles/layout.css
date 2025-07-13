@@ -14,8 +14,8 @@
 
 .main-content, .about-container {
   max-width: 900px;
-  width: 100%;
-  margin: 3rem auto 2rem auto;
+  width: 80rem;
+  margin: auto auto 2rem auto;
   border-radius: 1.5rem;
   padding: 2.5rem 2rem 2.5rem 2rem;
   min-height: 600px;

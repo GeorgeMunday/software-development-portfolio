@@ -9,7 +9,18 @@ const AboutMain = ({ onSidebarToggle, onInfoClick }) => {
   return (
     <div className="about-container">
       <div className="about-header">
-        <h1>About Me</h1>
+        <h1>
+          Hi im George Munday{' '}
+          <span
+            className="wave-emoji"
+            role="img"
+            aria-label="waving hand"
+            onMouseEnter={e => e.currentTarget.classList.add('wave')}
+            onMouseLeave={e => e.currentTarget.classList.remove('wave')}
+          >
+            👋
+          </span>
+        </h1>
       </div>
       <div className="about-content">
         <div className="about-intro">
