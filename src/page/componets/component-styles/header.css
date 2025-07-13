@@ -56,3 +56,91 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+/* Modern glassy header and navbar */
+.header {
+  background: linear-gradient(120deg, rgba(44,62,80,0.92) 0%, rgba(30,30,40,0.92) 100%);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.13);
+  border-bottom: 1.5px solid rgba(255,255,255,0.10);
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  border-radius: 0 0 24px 24px;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 2000;
+}
+
+.header__title--text {
+  color: #ffd6a0;
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  transition: color 0.3s ease;
+}
+
+.header__nav {
+  margin-top: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__nav--list {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  padding: 0;
+  margin: 0;
+  background: rgba(255,255,255,0.07);
+  border-radius: 12px;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.08);
+  padding: 0.5rem 1.5rem;
+}
+
+.header__nav--item {
+  display: inline-block;
+}
+
+.header__nav--button1,
+.header__nav--button4 {
+  background: linear-gradient(90deg, #fcb69f 0%, #ffecd2 100%);
+  color: #2c3e50;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(255,255,255,0.10);
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.header__nav--button1:hover,
+.header__nav--button4:hover {
+  background: linear-gradient(90deg, #ffd6a0 0%, #fcb69f 100%);
+  color: #222;
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+    border-radius: 0 0 16px 16px;
+    margin-bottom: 1.2rem;
+  }
+  .header__nav--list {
+    gap: 1.2rem;
+    padding: 0.3rem 0.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    padding: 0.7rem 0.2rem 0.5rem 0.2rem;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 0.5rem;
+  }
+  .header__title--text {
+    font-size: 1.5rem;
+  }
+}

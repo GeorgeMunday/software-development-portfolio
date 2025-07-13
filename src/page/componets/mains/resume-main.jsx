@@ -1,28 +1,28 @@
 import React from "react";
-import "./styles/main.css"
+import "./styles/main.css";
 
 const ResumeMain = () => {
-    return (
-    <div class="main-content">
-      <div class="row row-1">
-        <div class="box">1</div>
+  return (
+    <div className="main-content">
+      <div className="row row-1">
+        <div className="box">
+          <h1>Resume</h1>
+          <p style={{ opacity: 0.7 }}>
+            This is a placeholder for your resume content. Add your professional
+            experience, education, and skills here.
+          </p>
+        </div>
       </div>
-      <div class="row row-2">
-        <div class="box">2</div>
-        <div class="box">3</div>
-      </div>
-      <div class="row row-3">
-        <div class="box">4</div>
-        <div class="box">5</div>
-      </div>
-      <div class="row row-4">
-        <div class="box">6</div>
-      </div>
-      <div class="row row-5">
-        <div class="box">7</div>
-        <div class="box">8</div>
+      <div className="row row-2">
+        <div className="box" style={{ opacity: 0.4 }}>
+          <p>Mockup Section</p>
+        </div>
+        <div className="box" style={{ opacity: 0.4 }}>
+          <p>Mockup Section</p>
+        </div>
       </div>
     </div>
-    );
-}
+  );
+};
+
 export default ResumeMain;

@@ -3,6 +3,7 @@
   justify-content: center;
   margin-bottom: 1rem;
   gap: 1rem;
+  min-height: 120px; /* Ensure minimum height for consistent row sizing */
 }
 
 .box {
@@ -39,42 +40,111 @@
   margin-top: 60px; /* Header height */
 }
 
+/* Modern main-content style for all mains */
 .main-content {
-  flex: 1;
-  padding: 2rem;
-  transition: all 0.3s ease;
-  min-height: calc(100vh - 60px);
-  margin-left: 60px; /* Default sidebar closed width */
+  background: linear-gradient(120deg, rgba(44,62,80,0.82) 0%, rgba(30,30,40,0.82) 100%);
+  border-radius: 28px;
+  box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.18), 0 1.5px 0 0 rgba(255,255,255,0.10);
+  border: 1.5px solid rgba(255,255,255,0.13);
+  margin: 2.5rem auto;
+  max-width: 1100px;
+  min-height: 70vh;
+  padding: 3rem 2.5rem;
+  color: #f3f3f3;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, background 0.3s;
+  min-height: 600px; /* Force a fixed minimum height */
+  min-width: 320px;  /* Force a fixed minimum width */
+  width: 100%;       /* Ensure full width usage */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  backdrop-filter: blur(16px) saturate(160%);
 }
 
-.main-content.sidebar-open {
-  margin-left: 250px;
+.main-content h1, .main-content h2, .main-content h3 {
+  color: #ffd6a0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1.2rem;
 }
 
-.main-content.infobar-open {
-  margin-right: 300px;
+.main-content p, .main-content li {
+  color: #e0e0e0;
+  font-size: 1.13rem;
+  line-height: 1.7;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
+.main-content .box {
+  background: rgba(255,255,255,0.07);
+  border-radius: 16px;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.08);
+  color: #fff;
+  padding: 3rem 1.5rem;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.main-content .box:hover {
+  background: rgba(255,255,255,0.13);
+  box-shadow: 0 4px 24px 0 rgba(255,255,255,0.10);
+}
+
+.main-content .info-btn, .main-content .sidebar-toggle-btn {
+  background: linear-gradient(90deg, #fcb69f 0%, #ffecd2 100%);
+  color: #2c3e50;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(255,255,255,0.10);
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.main-content .info-btn:hover, .main-content .sidebar-toggle-btn:hover {
+  background: linear-gradient(90deg, #ffd6a0 0%, #fcb69f 100%);
+  color: #222;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Responsive for main-content */
+@media (max-width: 900px) {
   .main-content {
-    margin-left: 0;
+    padding: 1.5rem 0.7rem;
+    max-width: 98vw;
+    min-height: 400px; /* Adjusted min-height for smaller screens */
   }
-  
-  .main-content.sidebar-open {
-    margin-left: 200px;
+}
+@media (max-width: 600px) {
+  .main-content {
+    padding: 0.7rem 0.2rem;
+    border-radius: 0;
+    margin: 0;
+    min-height: 300px; /* Further adjusted min-height */
+    min-width: 0;      /* Allow width to go to 0 if needed */
   }
-  
+}
+
+@media (max-width: 1024px) {
+  .main-content,
+  .main-content.sidebar-open,
   .main-content.infobar-open {
-    margin-right: 250px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 
 @media (max-width: 768px) {
   .main-content.sidebar-open,
   .main-content.infobar-open {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   .main-content {

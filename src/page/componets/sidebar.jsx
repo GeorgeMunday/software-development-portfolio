@@ -1,14 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import "./component-styles/sidebar.css";
 
-const iconMap = [
-  { icon: '👨‍💻', type: 'about', label: 'About' },
-  { icon: '📄', type: 'resume', label: 'Resume' },
-  { icon: '📂', type: 'portfolio', label: 'Portfolio' },
-  { icon: '✉️', type: 'contact', label: 'Contact' },
-];
-
-const Sidebar = ({ isOpen, onClose, contentType, onIconClick }) => {
+const Sidebar = ({ isOpen, onClose, contentType }) => {
   const sidebarRef = useRef(null);
 
   // Keyboard accessibility: close on Escape
@@ -124,28 +117,6 @@ const Sidebar = ({ isOpen, onClose, contentType, onIconClick }) => {
               </div>
             )}
           </>
-        )}
-        {!isOpen && (
-          <div className="icons-container fancy-icons">
-            {iconMap.map(({ icon, type, label }) => (
-              <div
-                key={type}
-                className="icon fancy-icon"
-                title={label}
-                onClick={() => onIconClick(type)}
-                style={{ cursor: 'pointer' }}
-                tabIndex={0}
-                role="button"
-                aria-label={label}
-                onKeyDown={e => {
-                  if (e.key === 'Enter' || e.key === ' ') onIconClick(type);
-                }}
-              >
-                <span className="icon-emoji">{icon}</span>
-                <span className="icon-tooltip">{label}</span>
-              </div>
-            ))}
-          </div>
         )}
       </aside>
     </>

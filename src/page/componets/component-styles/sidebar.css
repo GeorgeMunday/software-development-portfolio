@@ -107,64 +107,6 @@
   outline: none;
 }
 
-/* Icon bar (closed state) */
-.icons-container.fancy-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  gap: 32px;
-  background: rgba(30, 30, 40, 0.7);
-  box-shadow: 2px 0 16px 0 rgba(31, 38, 135, 0.13);
-}
-.fancy-icon {
-  position: relative;
-  font-size: 2.2rem;
-  background: linear-gradient(135deg, #fcb69f 0%, #ffecd2 100%);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0;
-  box-shadow: 0 2px 12px 0 rgba(255,255,255,0.10);
-  transition: transform 0.18s, box-shadow 0.18s;
-  outline: none;
-}
-.fancy-icon:hover, .fancy-icon:focus {
-  transform: scale(1.12) translateY(-2px);
-  box-shadow: 0 4px 24px 0 rgba(255,255,255,0.18);
-}
-.icon-emoji {
-  pointer-events: none;
-}
-.icon-tooltip {
-  visibility: hidden;
-  opacity: 0;
-  width: max-content;
-  background: #222;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 4px 12px;
-  position: absolute;
-  left: 110%;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2000;
-  font-size: 1rem;
-  white-space: nowrap;
-  transition: opacity 0.2s;
-  margin-left: 8px;
-}
-.fancy-icon:hover .icon-tooltip,
-.fancy-icon:focus .icon-tooltip {
-  visibility: visible;
-  opacity: 1;
-}
-
 /* Responsive for mobile */
 @media (max-width: 600px) {
   .sidebar.glassmorphic {
@@ -178,10 +120,5 @@
   }
   .sidebar__title {
     margin: 24px 0 12px 0;
-  }
-  .fancy-icon {
-    width: 48px;
-    height: 48px;
-    font-size: 1.5rem;
   }
 }
