@@ -30,16 +30,24 @@ export default function Page() {
   // Handlers
   const handleSidebarToggle = (type) => {
     if (type) {
-      setSidebarContentType(type);
-      setIsSidebarOpen(true);
+      if (isSidebarOpen && sidebarContentType === type) {
+        setIsSidebarOpen(false);
+      } else {
+        setSidebarContentType(type);
+        setIsSidebarOpen(true);
+      }
     } else {
       setIsSidebarOpen(!isSidebarOpen);
     }
   };
 
   const handleInfoClick = (type) => {
-    setInfoType(type);
-    setIsInfoBarOpen(true);
+    if (isInfoBarOpen && infoType === type) {
+      setIsInfoBarOpen(false);
+    } else {
+      setInfoType(type);
+      setIsInfoBarOpen(true);
+    }
   };
 
   // Page content renderer
