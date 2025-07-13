@@ -103,6 +103,7 @@ const Sidebar = ({ isOpen, onClose, contentType }) => {
         role="complementary"
       >
         {isOpen && (
+          
           <>
             <button className="close-btn fancy-close" onClick={onClose} aria-label="Close sidebar">
               <span aria-hidden="true">✕</span>
