@@ -61,11 +61,11 @@ export default function Page() {
           />
         );
       case 'Resume':
-        return <ResumeMain onInfoClick={handleInfoClick} />;
+        return <ResumeMain onSidebarToggle={handleSidebarToggle} onInfoClick={handleInfoClick} />;
       case 'Portfolio':
-        return <Portfolio onInfoClick={handleInfoClick} />;
+        return <Portfolio onSidebarToggle={handleSidebarToggle} onInfoClick={handleInfoClick} />;
       case 'Contact':
-        return <ContactMain onInfoClick={handleInfoClick} />;
+        return <ContactMain onSidebarToggle={handleSidebarToggle} onInfoClick={handleInfoClick} />;
       default:
         return (
           <AboutMain 

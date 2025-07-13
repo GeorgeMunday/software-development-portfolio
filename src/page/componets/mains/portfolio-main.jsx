@@ -1,45 +1,50 @@
 import React from "react";
 import "./styles/main.css"
 
-const Portfolio = ({ onInfoClick }) => {
-    return (
-        <div className="main-content">
-            <div className="row row-1">
-                <div className="box">
-                    <button 
-                        className="info-btn" 
-                        onClick={() => onInfoClick('portfolio1')}
-                    >
-                        E-Commerce Project
-                    </button>
-                </div>
-            </div>
-            <div className="row row-2">
-                <div className="box">
-                    <button 
-                        className="info-btn" 
-                        onClick={() => onInfoClick('portfolio2')}
-                    >
-                        Task Management App
-                    </button>
-                </div>
-                <div className="box">
-                    {/* Additional project buttons can go here */}
-                </div>
-            </div>
-            <div className="row row-3">
-                <div className="box">4</div>
-                <div className="box">5</div>
-            </div>
-            <div className="row row-4">
-                <div className="box">6</div>
-            </div>
-            <div className="row row-5">
-                <div className="box">7</div>
-                <div className="box">8</div>
-            </div>
+const PortfolioMain = ({ onSidebarToggle, onInfoClick }) => {
+  return (
+    <div className="about-container">
+      <div className="about-header">
+        <h1>Portfolio</h1>
+        <div className="header-buttons">
+          <button 
+            className="sidebar-toggle-btn" 
+            onClick={() => onSidebarToggle('portfolio')}
+          >
+            ☰ Details
+          </button>
+          <button 
+            className="infobar-toggle-btn" 
+            onClick={() => onInfoClick('portfolio')}
+          >
+            ℹ Info
+          </button>
         </div>
-    );
+      </div>
+      <div className="about-content">
+        <div className="info-sections">
+          <div className="info-section">
+            <h2>Projects</h2>
+            <div className="projects-list">
+              <button 
+                className="info-btn" 
+                onClick={() => onInfoClick('ecommerce')}
+              >
+                E-Commerce Project
+              </button>
+              <button 
+                className="info-btn" 
+                onClick={() => onInfoClick('taskapp')}
+              >
+                Task Management App
+              </button>
+              {/* Add more project buttons here */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default Portfolio;
+export default PortfolioMain;
