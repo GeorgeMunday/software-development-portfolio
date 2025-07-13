@@ -5,14 +5,7 @@ const AboutMain = ({ onSidebarToggle, onInfoClick }) => {
     <div className="about-container">
       <div className="about-header">
         <h1>About Me</h1>
-        <button 
-          className="sidebar-toggle-btn" 
-          onClick={() => onSidebarToggle('about')}
-        >
-          ☰ Details
-        </button>
       </div>
-      
       <div className="about-content">
         <div className="about-intro">
           <p>Welcome to my portfolio! I'm a passionate developer with expertise in modern web technologies.</p>

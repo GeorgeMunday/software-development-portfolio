@@ -1,0 +1,35 @@
+/* Buttons and interaction styles */
+.info-btn {
+  background: #2d7dff;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.3rem;
+  font-size: 1rem;
+  margin-top: 0.7rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+}
+.info-btn:hover {
+  background: #155ab6;
+}
+
+.main-content .info-btn, .main-content .sidebar-toggle-btn {
+  background: linear-gradient(90deg, #fcb69f 0%, #ffecd2 100%);
+  color: #2c3e50;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(255,255,255,0.10);
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.main-content .info-btn:hover, .main-content .sidebar-toggle-btn:hover {
+  background: linear-gradient(90deg, #ffd6a0 0%, #fcb69f 100%);
+  color: #222;
+  transform: translateY(-2px) scale(1.04);
+}

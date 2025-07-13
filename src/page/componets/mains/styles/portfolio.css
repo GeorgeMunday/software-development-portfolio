@@ -1,0 +1,62 @@
+/* Portfolio grid and project card styles */
+.portfolio-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  width: 100%;
+}
+
+.portfolio-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: rgba(40,40,40,0.7);
+  border-radius: 1rem;
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: none;
+}
+
+.portfolio-thumb {
+  width: 100%;
+  max-width: 420px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.7rem;
+  margin-bottom: 1.1rem;
+  background: #222;
+  box-shadow: none;
+  display: block;
+}
+
+.portfolio-desc {
+  color: #e0e0e0;
+  font-size: 1.08rem;
+  margin-bottom: 1.1rem;
+  margin-top: -0.5rem;
+}
+
+.portfolio-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.1rem;
+}
+
+.portfolio-link-btn {
+  background: linear-gradient(90deg, #fcb69f 0%, #ffecd2 100%);
+  color: #2c3e50;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+}
+.portfolio-link-btn:hover {
+  background: linear-gradient(90deg, #ffd6a0 0%, #fcb69f 100%);
+  color: #222;
+}

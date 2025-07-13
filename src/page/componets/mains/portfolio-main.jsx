@@ -1,46 +1,67 @@
 import React from "react";
 import "./styles/main.css"
 
+const projects = [
+  {
+    title: "E-Commerce Project",
+    description: "A modern online store with shopping cart, payments, and admin dashboard.",
+    image: "/public/bag.png",
+    source: "https://github.com/yourusername/ecommerce",
+    website: "https://ecommerce.example.com",
+    infoType: "ecommerce"
+  },
+  {
+    title: "Task Management App",
+    description: "Organize tasks, collaborate with teams, and track progress in real time.",
+    image: "/public/test.png",
+    source: "https://github.com/yourusername/taskapp",
+    website: "https://taskapp.example.com",
+    infoType: "taskapp"
+  },
+  {
+    title: "Portfolio Website",
+    description: "Personal portfolio to showcase projects, skills, and contact info.",
+    image: "/public/Minimalist-Kitty.jpg",
+    source: "https://github.com/yourusername/portfolio",
+    website: "https://portfolio.example.com",
+    infoType: "portfolio"
+  },
+  {
+    title: "Blog Platform",
+    description: "A simple blogging platform with markdown support and user accounts.",
+    image: "/public/background.avif",
+    source: "https://github.com/yourusername/blog",
+    website: "https://blog.example.com",
+    infoType: "blog"
+  }
+];
+
 const PortfolioMain = ({ onSidebarToggle, onInfoClick }) => {
   return (
     <div className="about-container">
       <div className="about-header">
-        <h1>Portfolio</h1>
-        <div className="header-buttons">
-          <button 
-            className="sidebar-toggle-btn" 
-            onClick={() => onSidebarToggle('portfolio')}
-          >
-            ☰ Details
-          </button>
-          <button 
-            className="infobar-toggle-btn" 
-            onClick={() => onInfoClick('portfolio')}
-          >
-            ℹ Info
-          </button>
-        </div>
+        <h1>projects</h1>
       </div>
       <div className="about-content">
-        <div className="info-sections">
-          <div className="info-section">
-            <h2>Projects</h2>
-            <div className="projects-list">
+        <div className="info-sections portfolio-grid">
+          {projects.map((project, idx) => (
+            <div className="info-section portfolio-section" key={idx}>
+              <img src={project.image} alt={project.title + ' preview'} className="portfolio-thumb" />
+              <h2>{project.title}</h2>
+              <p className="portfolio-desc">{project.description}</p>
+              <div className="portfolio-links">
+                <a href={project.source} target="_blank" rel="noopener noreferrer" className="portfolio-link-btn">Source Code</a>
+                <a href={project.website} target="_blank" rel="noopener noreferrer" className="portfolio-link-btn">Website</a>
+              </div>
               <button 
                 className="info-btn" 
-                onClick={() => onInfoClick('ecommerce')}
+                onClick={() => onInfoClick(project.infoType)}
+                style={{marginTop: '1.2rem'}}
               >
-                E-Commerce Project
+                More Details
               </button>
-              <button 
-                className="info-btn" 
-                onClick={() => onInfoClick('taskapp')}
-              >
-                Task Management App
-              </button>
-              {/* Add more project buttons here */}
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
