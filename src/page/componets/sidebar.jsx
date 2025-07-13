@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import "./component-styles/sidebar.css";
 
-const Sidebar = ({ isOpen, onClose, contentType }) => {
-  // Content for different sidebar cases
+const iconMap = [
+  { icon: '👨‍💻', type: 'about', label: 'About' },
+  { icon: '📄', type: 'resume', label: 'Resume' },
+  { icon: '📂', type: 'portfolio', label: 'Portfolio' },
+  { icon: '✉️', type: 'contact', label: 'Contact' },
+];
+
+const Sidebar = ({ isOpen, onClose, contentType, onIconClick }) => {
+  const sidebarRef = useRef(null);
+
+  // Keyboard accessibility: close on Escape
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
+  // Focus trap for accessibility (simple version)
+  useEffect(() => {
+    if (isOpen && sidebarRef.current) {
+      sidebarRef.current.focus();
+    }
+  }, [isOpen]);
+
   const sidebarContent = {
     about: (
       <div className="sidebar-content">
         <div className="sidebar__title">
-          <div className="sidebar__title--img">👨‍💻</div>
+          <div className="sidebar__title--img avatar-gradient">👨‍💻</div>
           <h1 className="sidebar__title--text">George Munday</h1>
           <p className="sidebar__title--subtitle">Web Developer</p>
         </div>
@@ -24,7 +49,7 @@ const Sidebar = ({ isOpen, onClose, contentType }) => {
     resume: (
       <div className="sidebar-content">
         <div className="sidebar__title">
-          <div className="sidebar__title--img">📄</div>
+          <div className="sidebar__title--img avatar-gradient">📄</div>
           <h1 className="sidebar__title--text">Resume</h1>
           <p className="sidebar__title--subtitle">Professional Experience</p>
         </div>
@@ -40,7 +65,7 @@ const Sidebar = ({ isOpen, onClose, contentType }) => {
     portfolio: (
       <div className="sidebar-content">
         <div className="sidebar__title">
-          <div className="sidebar__title--img">📂</div>
+          <div className="sidebar__title--img avatar-gradient">📂</div>
           <h1 className="sidebar__title--text">Portfolio</h1>
           <p className="sidebar__title--subtitle">Recent Projects</p>
         </div>
@@ -57,7 +82,7 @@ const Sidebar = ({ isOpen, onClose, contentType }) => {
     contact: (
       <div className="sidebar-content">
         <div className="sidebar__title">
-          <div className="sidebar__title--img">✉️</div>
+          <div className="sidebar__title--img avatar-gradient">✉️</div>
           <h1 className="sidebar__title--text">Contact</h1>
           <p className="sidebar__title--subtitle">Get in Touch</p>
         </div>
@@ -74,31 +99,56 @@ const Sidebar = ({ isOpen, onClose, contentType }) => {
   };
 
   return (
-    <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
-      {isOpen && (
-        <>
-          <button className="close-btn" onClick={onClose}>
-            ✕
-          </button>
-          {sidebarContent[contentType] || (
-            <div className="sidebar-content">
-              <div className="sidebar__title">
-                <div className="sidebar__title--img">👨‍💻</div>
-                <h1 className="sidebar__title--text">George Munday</h1>
-                <p className="sidebar__title--subtitle">Web Developer</p>
+    <>
+      {isOpen && <div className="sidebar-overlay fancy-overlay" onClick={onClose} aria-label="Close sidebar" tabIndex={0} />}
+      <aside
+        className={`sidebar glassmorphic${isOpen ? ' open sidebar-animate' : ''}`}
+        ref={sidebarRef}
+        tabIndex={-1}
+        aria-hidden={!isOpen}
+        aria-label="Sidebar"
+        role="complementary"
+      >
+        {isOpen && (
+          <>
+            <button className="close-btn fancy-close" onClick={onClose} aria-label="Close sidebar">
+              <span aria-hidden="true">✕</span>
+            </button>
+            {sidebarContent[contentType] || (
+              <div className="sidebar-content">
+                <div className="sidebar__title">
+                  <div className="sidebar__title--img avatar-gradient">👨‍💻</div>
+                  <h1 className="sidebar__title--text">George Munday</h1>
+                  <p className="sidebar__title--subtitle">Web Developer</p>
+                </div>
               </div>
-            </div>
-          )}
-        </>
-      )}
-      {!isOpen && (
-        <div className="icons-container">
-          <div className="icon">🔍</div>
-          <div className="icon">📁</div>
-          <div className="icon">⚙️</div>
-        </div>
-      )}
-    </aside>
+            )}
+          </>
+        )}
+        {!isOpen && (
+          <div className="icons-container fancy-icons">
+            {iconMap.map(({ icon, type, label }) => (
+              <div
+                key={type}
+                className="icon fancy-icon"
+                title={label}
+                onClick={() => onIconClick(type)}
+                style={{ cursor: 'pointer' }}
+                tabIndex={0}
+                role="button"
+                aria-label={label}
+                onKeyDown={e => {
+                  if (e.key === 'Enter' || e.key === ' ') onIconClick(type);
+                }}
+              >
+                <span className="icon-emoji">{icon}</span>
+                <span className="icon-tooltip">{label}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </aside>
+    </>
   );
 };
 
