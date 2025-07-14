@@ -11,8 +11,9 @@ const projects = [
     title: "Patient Search system System",
     description: "a simple patient search and statistics system for healthcare providers.",
     image: "search.png",
-    source: "https://github.com",
+    source: "https://github.com/GeorgeMunday/Patient-search-and-statistics",
     website: "https://patient-search-and-statistics.vercel.app",
+    hasWebsite: true,
     infoType: "ecommerce"
   },
   {
@@ -21,22 +22,25 @@ const projects = [
     image: "portfolio.png",
     source: "https://github.com/yourusername/taskapp",
     website: "https://taskapp.example.com",
+    hasWebsite: true,
     infoType: "taskapp"
   },
   {
-    title: "website1",
-    description: "not made yet",
+    title: "Pathfinder Visualizer",
+    description: "simple pathfinding algorithm visualizer made in pyhton.",
     image: "OIP.webp",
-    source: "https://github.com/yourusername/portfolio",
-    website: "https://portfolio.example.com",
+    source: "https://github.com/GeorgeMunday/path-finder",
+    website: "",
+    hasWebsite: false,
     infoType: "portfolio"
   },
   {
-    title: "Blog Platform",
-    description: "A simple blogging platform with markdown support and user accounts.",
+    title: "C# calculator app",
+    description: "A simple calculator app made in C#.",
     image: "stock1.webp",
-    source: "https://github.com/yourusername/blog",
-    website: "https://blog.example.com",
+    source: "ahttps://github.com/GeorgeMunday/Calculator",
+    website: "",
+    hasWebsite: false,
     infoType: "blog"
   }
 ];
@@ -56,23 +60,45 @@ const PortfolioMain = ({ onSidebarToggle, onInfoClick }) => {
               <p className="portfolio-desc">{project.description}</p>
               <div className="portfolio-links portfolio-actions-row">
                 <a href={project.source} target="_blank" rel="noopener noreferrer" className="portfolio-link-btn portfolio-action-btn">Source Code</a>
-                <a href={project.website} target="_blank" rel="noopener noreferrer" className="portfolio-link-btn portfolio-action-btn">Website</a>
-                {idx % 2 === 0 ? (
-                  <button
-                    className="info-btn portfolio-action-btn"
-                    onClick={() => onInfoClick(project.infoType)}
-                    style={{marginTop: 0}}
-                  >
-                    More Details
-                  </button>
+                {project.hasWebsite && project.website ? (
+                  <>
+                    <a href={project.website} target="_blank" rel="noopener noreferrer" className="portfolio-link-btn portfolio-action-btn">Website</a>
+                    {idx % 2 === 0 ? (
+                      <button
+                        className="info-btn portfolio-action-btn"
+                        onClick={() => onInfoClick(project.infoType)}
+                        style={{marginTop: 0}}
+                      >
+                        More Details
+                      </button>
+                    ) : (
+                      <button
+                        className="info-btn portfolio-action-btn"
+                        onClick={() => onSidebarToggle && onSidebarToggle(project.infoType)}
+                        style={{marginTop: 0}}
+                      >
+                        More Details
+                      </button>
+                    )}
+                  </>
                 ) : (
-                  <button
-                    className="info-btn portfolio-action-btn"
-                    onClick={() => onSidebarToggle && onSidebarToggle(project.infoType)}
-                    style={{marginTop: 0}}
-                  >
-                    More Details
-                  </button>
+                  idx % 2 === 0 ? (
+                    <button
+                      className="info-btn portfolio-action-btn"
+                      onClick={() => onInfoClick(project.infoType)}
+                      style={{marginTop: 0}}
+                    >
+                      More Details
+                    </button>
+                  ) : (
+                    <button
+                      className="info-btn portfolio-action-btn"
+                      onClick={() => onSidebarToggle && onSidebarToggle(project.infoType)}
+                      style={{marginTop: 0}}
+                    >
+                      More Details
+                    </button>
+                  )
                 )}
               </div>
             </div>

@@ -1,3 +1,18 @@
+.portfolio-link-btn-disabled {
+  background: #e0e0e0;
+  color: #aaa;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0.7;
+  cursor: not-allowed;
+  box-shadow: none;
+  transition: none;
+  pointer-events: none;
+}
 /* Portfolio grid and project card styles */
 .portfolio-grid {
   display: flex;
@@ -82,6 +97,26 @@
   justify-content: space-between;
   align-items: stretch;
   gap: 0;
+}
+
+/* When only two buttons, center them and make them fill equally */
+.portfolio-actions-row > .portfolio-action-btn:only-child {
+  flex: 1 1 100%;
+  max-width: 100%;
+  margin: 0 0.5rem;
+}
+.portfolio-actions-row > .portfolio-action-btn:first-child:nth-last-child(2),
+.portfolio-actions-row > .portfolio-action-btn:first-child:nth-last-child(2) ~ .portfolio-action-btn {
+  flex: 1 1 50%;
+  max-width: 50%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.portfolio-actions-row > .portfolio-action-btn:first-child:nth-last-child(2) {
+  margin-left: 0;
+}
+.portfolio-actions-row > .portfolio-action-btn:last-child:nth-child(2) {
+  margin-right: 0;
 }
 
 .portfolio-action-btn {
