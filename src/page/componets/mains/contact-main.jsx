@@ -13,7 +13,7 @@ const ContactMain = ({ onSidebarToggle, onInfoClick }) => {
         <div className="info-sections">
           <div className="info-section resume-section-bg">
             <h2 className="resume-section-title">Contact</h2>
-            <form className="contact-form">
+            <form className="contact-form" onSubmit={e => { e.preventDefault(); alert('Feature not ready'); }}>
               <label>
                 Name
                 <input type="text" placeholder="Your Name" />

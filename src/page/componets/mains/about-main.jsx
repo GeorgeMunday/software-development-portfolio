@@ -6,7 +6,7 @@ import './styles/buttons.css';
 import './styles/typography.css';
 import './styles/skills-icons.css';
 
-const HomeMain = ({ onSidebarToggle, onInfoClick }) => {
+const HomeMain = ({ onSidebarToggle, onInfoClick, setPage }) => {
   return (
     <div className="about-content">
       <div className="about-header-intro resume-section-bg" style={{ marginBottom: '2.5rem', padding: '2.2rem 1.5rem' }}>
@@ -23,20 +23,23 @@ const HomeMain = ({ onSidebarToggle, onInfoClick }) => {
           </span>
         </h1>
         <div className="about-intro">
-          <p>Welcome to my portfolio! I'm a passionate developer with expertise in modern web technologies.</p>
+          <p>Welcome to my portfolio! I'm a 17-year-old student and aspiring software developer based in Yorkshire, England. I'm passionate about technology and constantly learning new things every day.</p>
         </div>
       </div>
       <div className="about-content">
         <div className="info-sections">
           {/* Experience Section - block style */}
           <div className="info-section resume-section-bg">
-            <h2 className="resume-section-title">Experience</h2>
-            <p>5+ years of professional development experience</p>
+            <h2 className="resume-section-title">Work Experience</h2>
+            <p>Dedalus - march 2025</p>
+            <p>brief description</p>
+            <p>Mcdonalds - september 2024</p>
+            <p>brief description</p>
             <button 
               className="info-btn" 
-              onClick={() => onSidebarToggle && onSidebarToggle('experience')}
+              onClick={() => setPage && setPage('Resume')}
             >
-              More Info
+              Learn More
             </button>
           </div>
 
@@ -74,10 +77,7 @@ const HomeMain = ({ onSidebarToggle, onInfoClick }) => {
             </div>
             <button
               className="info-btn"
-              onClick={() => {
-                if (onSidebarToggle) onSidebarToggle('skills');
-                if (onInfoClick) onInfoClick('skills');
-              }}
+              onClick={() => setPage && setPage('Portfolio')}
             >
               More Info
             </button>
@@ -86,10 +86,11 @@ const HomeMain = ({ onSidebarToggle, onInfoClick }) => {
           {/* Education Section - block style */}
           <div className="info-section resume-section-bg">
             <h2 className="resume-section-title">Education</h2>
-            <p>Computer Science Degree from XYZ University</p>
+            <p>T level digital production design and development</p>
+            <p>9 GCSEs</p>
             <button 
               className="info-btn" 
-              onClick={() => onInfoClick && onInfoClick('education')}
+              onClick={() => setPage && setPage('Resume')}
             >
               More Info
             </button>
@@ -99,6 +100,12 @@ const HomeMain = ({ onSidebarToggle, onInfoClick }) => {
           <div className="info-section resume-section-bg">
             <h2 className="resume-section-title">Contact</h2>
             <p>Get in touch for opportunities</p>
+            <button
+              className="info-btn"
+              onClick={() => setPage && setPage('Contact')}
+            >
+              Go to Contact
+            </button>
           </div>
         </div>
       </div>
