@@ -1,3 +1,55 @@
+/* Infobar button for education/experience */
+.resume-section-bg .infobar-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.7rem;
+  padding: 0.18rem 0.7rem 0.18rem 0.7rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #2d7dff 60%, #fcb69f 100%);
+  border: none;
+  border-radius: 1.2rem;
+  box-shadow: 0 1.5px 8px 0 rgba(44,62,80,0.07);
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.15s;
+  outline: none;
+}
+.resume-section-bg .infobar-toggle-btn:hover, .resume-section-bg .infobar-toggle-btn:focus {
+  background: linear-gradient(90deg, #fcb69f 60%, #2d7dff 100%);
+  color: #222;
+  box-shadow: 0 4px 16px 0 rgba(252,182,159,0.13);
+  transform: translateY(-2px) scale(1.06);
+}
+/* Sidebar action button inside resume list */
+.resume-sidebar-btn {
+  display: inline-block;
+  margin: 0.7rem 0 0.7rem 0.2rem;
+  padding: 0.38rem 1.1rem;
+  font-size: 1.01rem;
+  font-weight: 700;
+  background: rgba(44,62,80,0.07);
+  border: 1.2px solid #bdbdbd;
+  border-radius: 1.2rem;
+  box-shadow: 0 1.5px 8px 0 rgba(44,62,80,0.07);
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s, box-shadow 0.18s;
+  outline: none;
+  /* Gradient text */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, #fcb69f 0%, #fff 100%);
+  -webkit-text-fill-color: transparent;
+}
+.resume-sidebar-btn:hover, .resume-sidebar-btn:focus {
+  background-image: linear-gradient(90deg, #fff 0%, #fcb69f 100%);
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  border: 1.2px solid #fcb69f;
+  box-shadow: 0 4px 16px 0 rgba(252,182,159,0.13);
+}
 /* Resume page section backgrounds and spacing */
 .resume-sections {
   gap: 3.5rem;

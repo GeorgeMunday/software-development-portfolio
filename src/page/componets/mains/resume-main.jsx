@@ -9,47 +9,10 @@ import './styles/resume.css';
 const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
   return (
     <div className="about-container">
-      <div className="about-header">
-        <h1>Resume</h1>
-        <div className="header-buttons">
-          <button
-            className="sidebar-toggle-btn"
-            onClick={() => onSidebarToggle && onSidebarToggle('resume')}
-            style={{ marginRight: '1rem' }}
-          >
-            ☰ Details
-          </button>
-        </div>
-      </div>
       <div className="about-content">
-        <div className="info-sections resume-sections">
-          {/* Past Jobs Section */}
-          <div className="info-section resume-section-bg">
-            <h2 className="resume-section-title">Past Jobs
-              <button className="infobar-toggle-btn" onClick={() => onInfoClick && onInfoClick('pastjobs')}>ℹ</button>
-            </h2>
-            <ul className="resume-list">
-              <li>
-                <strong>Senior Developer</strong> at ABC Corp (2021–2025)
-                <ul>
-                  <li>Led a team building scalable web apps with React and Node.js.</li>
-                  <li>Skills gained: Leadership, React, Node.js, Project Management, Agile, CI/CD, Mentoring</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Frontend Engineer</strong> at XYZ Inc (2018–2021)
-                <ul>
-                  <li>Developed modern UIs and improved accessibility for enterprise clients.</li>
-                  <li>Skills gained: Accessibility, UI/UX, JavaScript, CSS3, SASS, Client Communication</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
           {/* Experience Section */}
           <div className="info-section resume-section-bg">
-            <h2 className="resume-section-title">Experience
-              <button className="infobar-toggle-btn" onClick={() => onInfoClick && onInfoClick('experience')}>ℹ</button>
-            </h2>
+            <h2 className="resume-section-title">Experience</h2>
             <ul className="resume-list">
               <li>
                 <strong>Dedals Internship</strong> (2025)
@@ -58,6 +21,12 @@ const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
                   <li>Skills gained: Teamwork, Problem Solving, Modern Web Tech, Communication</li>
                 </ul>
               </li>
+            <button
+              className="resume-sidebar-btn"
+              onClick={() => onSidebarToggle && onSidebarToggle('resume')}
+            >
+              a bit more on what I did
+            </button>
               <li>
                 <strong>McDonald's Crew Member</strong> (2024–2025)
                 <ul>
@@ -65,22 +34,45 @@ const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
                   <li>Skills gained: Time Management, Organization, Customer Service, Teamwork</li>
                 </ul>
               </li>
+              <button
+                className="resume-sidebar-btn"
+                onClick={() => onSidebarToggle && onSidebarToggle('resume')}
+              >
+                a bit more on what I did
+              </button>
             </ul>
           </div>
           {/* Education Section */}
           <div className="info-section resume-section-bg">
-            <h2 className="resume-section-title">Education
-              <button className="infobar-toggle-btn" onClick={() => onInfoClick && onInfoClick('education')}>ℹ</button>
-            </h2>
+            <h2 className="resume-section-title">Education</h2>
             <ul className="resume-list">
               <li>
-                <strong>BSc Computer Science</strong>, XYZ University (2014–2018)
+                <strong>T Level in Digital Production, Design & Development</strong>, York College (2023–2025)
                 <ul>
-                  <li>Relevant coursework: Web Development, Algorithms, Databases</li>
-                  <li>Skills gained: Computer Science Fundamentals, SQL, Algorithms, Web Development</li>
+                  <li>Specialized in software development, digital project management, and UI/UX design.</li>
+                  <li>Completed industry placement, developed real-world web applications, and collaborated with teams.</li>
+                  <li>Key skills: JavaScript, React, Agile, Figma, teamwork, and communication.</li>
                 </ul>
               </li>
+              <button className="resume-sidebar-btn" onClick={() => onInfoClick && onInfoClick('education')}>
+                a bit more on what I did
+              </button>
+              <li>
+                <strong>9 GCSEs</strong> (2021–2023)
+                <ul>
+                  <li>Triple Science (Biology, Chemistry, Physics)</li>
+                  <li>Mathematics</li>
+                  <li>English Language & English Literature</li>
+                  <li>Geography</li>
+                  <li>Drama</li>
+                  <li>Astronomy</li>
+                </ul>
+              </li>
+              <button className="resume-sidebar-btn" onClick={() => onInfoClick && onInfoClick('education')}>
+                a bit more on what I did
+              </button>
             </ul>
+            
           </div>
           <div className="info-section" style={{ textAlign: 'center', marginTop: '1.5rem' }}>
             <a
@@ -93,7 +85,6 @@ const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

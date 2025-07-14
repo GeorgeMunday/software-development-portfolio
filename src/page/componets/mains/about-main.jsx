@@ -62,9 +62,6 @@ const HomeMain = ({ onSidebarToggle, onInfoClick, setPage }) => {
               <span title="HTML5" className="skill-icon">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" height="36" />
               </span>
-              <span title="Sass" className="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="Sass" height="36" />
-              </span>
               <span title="TypeScript" className="skill-icon">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" height="36" />
               </span>
