@@ -4,70 +4,82 @@ import './styles/header-buttons.css';
 import './styles/info-section.css';
 import './styles/buttons.css';
 import './styles/typography.css';
+import './styles/resume.css';
 
 const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
   return (
     <div className="about-container">
       <div className="about-header">
         <h1>Resume</h1>
+        <div className="header-buttons">
+          <button
+            className="sidebar-toggle-btn"
+            onClick={() => onSidebarToggle && onSidebarToggle('resume')}
+            style={{ marginRight: '1rem' }}
+          >
+            ☰ Details
+          </button>
+        </div>
       </div>
       <div className="about-content">
-        <div className="info-sections">
-          <div className="info-section">
-            <h2>Past Jobs</h2>
-            <ul>
+        <div className="info-sections resume-sections">
+          {/* Past Jobs Section */}
+          <div className="info-section resume-section-bg">
+            <h2 className="resume-section-title">Past Jobs
+              <button className="infobar-toggle-btn" onClick={() => onInfoClick && onInfoClick('pastjobs')}>ℹ</button>
+            </h2>
+            <ul className="resume-list">
               <li>
                 <strong>Senior Developer</strong> at ABC Corp (2021–2025)
-                <br />- Led a team building scalable web apps with React and Node.js.
-                <br />
-                <button
-                  className="sidebar-toggle-btn"
-                  onClick={() => onSidebarToggle("resume")}
-                  style={{ marginTop: '0.5rem' }}
-                >
-                  ☰ Details
-                </button>
+                <ul>
+                  <li>Led a team building scalable web apps with React and Node.js.</li>
+                  <li>Skills gained: Leadership, React, Node.js, Project Management, Agile, CI/CD, Mentoring</li>
+                </ul>
               </li>
               <li>
                 <strong>Frontend Engineer</strong> at XYZ Inc (2018–2021)
-                <br />- Developed modern UIs and improved accessibility for enterprise clients.
-                <br />
-                <button
-                  className="sidebar-toggle-btn"
-                  onClick={() => onSidebarToggle("resume")}
-                  style={{ marginTop: '0.5rem' }}
-                >
-                  ☰ Details
-                </button>
+                <ul>
+                  <li>Developed modern UIs and improved accessibility for enterprise clients.</li>
+                  <li>Skills gained: Accessibility, UI/UX, JavaScript, CSS3, SASS, Client Communication</li>
+                </ul>
               </li>
             </ul>
           </div>
-          <div className="info-section">
-            <h2>Education</h2>
-            <ul>
+          {/* Experience Section */}
+          <div className="info-section resume-section-bg">
+            <h2 className="resume-section-title">Experience
+              <button className="infobar-toggle-btn" onClick={() => onInfoClick && onInfoClick('experience')}>ℹ</button>
+            </h2>
+            <ul className="resume-list">
+              <li>
+                <strong>Dedals Internship</strong> (2025)
+                <ul>
+                  <li>Six-month internship learning real-world web development.</li>
+                  <li>Skills gained: Teamwork, Problem Solving, Modern Web Tech, Communication</li>
+                </ul>
+              </li>
+              <li>
+                <strong>McDonald's Crew Member</strong> (2024–2025)
+                <ul>
+                  <li>Worked in a fast-paced environment, strengthening time management and organization.</li>
+                  <li>Skills gained: Time Management, Organization, Customer Service, Teamwork</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          {/* Education Section */}
+          <div className="info-section resume-section-bg">
+            <h2 className="resume-section-title">Education
+              <button className="infobar-toggle-btn" onClick={() => onInfoClick && onInfoClick('education')}>ℹ</button>
+            </h2>
+            <ul className="resume-list">
               <li>
                 <strong>BSc Computer Science</strong>, XYZ University (2014–2018)
+                <ul>
+                  <li>Relevant coursework: Web Development, Algorithms, Databases</li>
+                  <li>Skills gained: Computer Science Fundamentals, SQL, Algorithms, Web Development</li>
+                </ul>
               </li>
-              <li>
-                Relevant coursework: Web Development, Algorithms, Databases
-              </li>
-            </ul>
-          </div>
-          <div className="info-section">
-            <h2>Skills</h2>
-            <button
-              className="infobar-toggle-btn"
-              onClick={() => onInfoClick("resume")}
-              style={{ marginBottom: '0.5rem' }}
-            >
-              ℹ Info
-            </button>
-            <ul>
-              <li>React, JavaScript, TypeScript</li>
-              <li>Node.js, Express</li>
-              <li>HTML5, CSS3, SASS</li>
-              <li>MongoDB, SQL</li>
-              <li>Git, CI/CD, Agile</li>
             </ul>
           </div>
           <div className="info-section" style={{ textAlign: 'center', marginTop: '1.5rem' }}>

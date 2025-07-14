@@ -35,11 +35,6 @@
   transition: border 0.2s;
   align-self: stretch;
 }
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border: 1.2px solid #7e57c2;
-  background: #fff;
-}
 .contact-form textarea {
   resize: vertical;
   min-height: 100px;

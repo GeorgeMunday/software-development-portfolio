@@ -11,7 +11,8 @@ const ContactMain = ({ onSidebarToggle, onInfoClick }) => {
     <div className="about-container">
       <div className="about-content">
         <div className="info-sections">
-          <div className="info-section">
+          <div className="info-section resume-section-bg">
+            <h2 className="resume-section-title">Contact</h2>
             <form className="contact-form">
               <label>
                 Name
