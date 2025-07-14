@@ -58,7 +58,7 @@ export default function Page() {
           <AboutMain 
             onSidebarToggle={handleSidebarToggle}
             onInfoClick={handleInfoClick}
-            setPage={setCurrentPage}
+            setPage={setCurrentPage}//xb
           />
         );
       case 'Resume':
