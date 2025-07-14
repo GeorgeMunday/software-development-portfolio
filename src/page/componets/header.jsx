@@ -22,7 +22,7 @@ export default function Header({ currentPage, setPage }) {
             exit="exit"
             transition={{ duration: 0.4, ease: 'easeInOut' }}
           >
-            {currentPage}
+            {currentPage === 'Home' ? 'Home' : currentPage}
           </motion.h1>
         </AnimatePresence>
       </div>
@@ -30,7 +30,7 @@ export default function Header({ currentPage, setPage }) {
       <nav className="header__nav">
         <ul className="header__nav--list">
           <li className="header__nav--item">
-            <button className="header__nav--button1" onClick={() => setPage('About')}>About</button>
+            <button className="header__nav--button1" onClick={() => setPage('Home')}>Home</button>
           </li>
           <li className="header__nav--item">
             <button className="header__nav--button1" onClick={() => setPage('Resume')}>Resume</button>

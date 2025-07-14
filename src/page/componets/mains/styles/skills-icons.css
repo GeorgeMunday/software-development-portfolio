@@ -1,0 +1,29 @@
+/* Skills icons list and icon styling for About page */
+.skills-icons-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin: 1rem 0 1.5rem 0;
+  justify-content: flex-start;
+}
+
+.skill-icon {
+  background: #22223b0d;
+  border-radius: 0.7rem;
+  padding: 0.5rem 0.7rem;
+  box-shadow: 0 1px 4px rgba(44,62,80,0.07);
+  display: flex;
+  align-items: center;
+  transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+}
+.skill-icon:hover {
+  background: #fcb69f22;
+  transform: translateY(-2px) scale(1.07);
+  box-shadow: 0 4px 16px rgba(44,62,80,0.13);
+}
+
+.skill-icon img {
+  display: block;
+  height: 36px;
+  width: auto;
+}

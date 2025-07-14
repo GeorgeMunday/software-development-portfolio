@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Header from './componets/header';
 import Sidebar from './componets/sidebar';
 import InfoBar from './componets/infobar';
-import AboutMain from './componets/mains/about-main';
+import HomeMain from './componets/mains/about-main';
 import ResumeMain from './componets/mains/resume-main';
 import Portfolio from './componets/mains/portfolio-main';
 import ContactMain from './componets/mains/contact-main';
@@ -53,12 +53,12 @@ export default function Page() {
   // Page content renderer
   const renderMainContent = () => {
     switch (currentPage) {
-      case 'About':
+      case 'Home':
         return (
-          <AboutMain 
+          <HomeMain 
             onSidebarToggle={handleSidebarToggle}
             onInfoClick={handleInfoClick}
-            setPage={setCurrentPage}//xb
+            setPage={setCurrentPage}
           />
         );
       case 'Resume':
@@ -69,7 +69,7 @@ export default function Page() {
         return <ContactMain onSidebarToggle={handleSidebarToggle} onInfoClick={handleInfoClick} />;
       default:
         return (
-          <AboutMain 
+          <HomeMain 
             onSidebarToggle={handleSidebarToggle}
             onInfoClick={handleInfoClick}
             setPage={setCurrentPage}
