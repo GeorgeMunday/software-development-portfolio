@@ -6,7 +6,7 @@ import './styles/buttons.css';
 import './styles/typography.css';
 import './styles/skills-icons.css';
 
-const HomeMain = ({ onSidebarToggle, onInfoClick, setPage }) => {
+const HomeMain = ({ onSidebarToggle,setPage }) => {
   return (
     <div className="about-content">
       <div className="about-header-intro resume-section-bg" style={{ marginBottom: '2.5rem', padding: '2.2rem 1.5rem' }}>
@@ -76,7 +76,7 @@ const HomeMain = ({ onSidebarToggle, onInfoClick, setPage }) => {
               className="info-btn"
               onClick={() => setPage && setPage('Portfolio')}
             >
-              More Info
+              View Projects
             </button>
           </div>
 
@@ -92,7 +92,7 @@ const HomeMain = ({ onSidebarToggle, onInfoClick, setPage }) => {
               More Info
             </button>
           </div>
-
+          
           {/* Contact Preview - block style */}
           <div className="info-section resume-section-bg">
             <h2 className="resume-section-title">Contact</h2>

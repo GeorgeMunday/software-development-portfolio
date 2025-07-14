@@ -8,25 +8,25 @@ import './styles/typography.css';
 
 const projects = [
   {
-    title: "E-Commerce Project",
-    description: "A modern online store with shopping cart, payments, and admin dashboard.",
-    image: "/public/bag.png",
-    source: "https://github.com/yourusername/ecommerce",
-    website: "https://ecommerce.example.com",
+    title: "Patient Search system System",
+    description: "a simple patient search and statistics system for healthcare providers.",
+    image: "search.png",
+    source: "https://github.com",
+    website: "https://patient-search-and-statistics.vercel.app",
     infoType: "ecommerce"
   },
   {
-    title: "Task Management App",
-    description: "Organize tasks, collaborate with teams, and track progress in real time.",
-    image: "/public/test.png",
+    title: "Portfolio Website",
+    description: "Personal portfolio to showcase projects, skills, and contact info.",
+    image: "portfolio.png",
     source: "https://github.com/yourusername/taskapp",
     website: "https://taskapp.example.com",
     infoType: "taskapp"
   },
   {
-    title: "Portfolio Website",
-    description: "Personal portfolio to showcase projects, skills, and contact info.",
-    image: "/public/Minimalist-Kitty.jpg",
+    title: "website1",
+    description: "not made yet",
+    image: "OIP.webp",
     source: "https://github.com/yourusername/portfolio",
     website: "https://portfolio.example.com",
     infoType: "portfolio"
@@ -34,7 +34,7 @@ const projects = [
   {
     title: "Blog Platform",
     description: "A simple blogging platform with markdown support and user accounts.",
-    image: "/public/test.png",
+    image: "stock1.webp",
     source: "https://github.com/yourusername/blog",
     website: "https://blog.example.com",
     infoType: "blog"
@@ -45,7 +45,7 @@ const PortfolioMain = ({ onSidebarToggle, onInfoClick }) => {
   return (
     <div className="about-container">
       <div className="about-header">
-        <h1>projects</h1>
+        <h1>Projects</h1>
       </div>
       <div className="about-content">
         <div className="info-sections portfolio-grid">
@@ -57,13 +57,23 @@ const PortfolioMain = ({ onSidebarToggle, onInfoClick }) => {
               <div className="portfolio-links portfolio-actions-row">
                 <a href={project.source} target="_blank" rel="noopener noreferrer" className="portfolio-link-btn portfolio-action-btn">Source Code</a>
                 <a href={project.website} target="_blank" rel="noopener noreferrer" className="portfolio-link-btn portfolio-action-btn">Website</a>
-                <button 
-                  className="info-btn portfolio-action-btn" 
-                  onClick={() => onInfoClick(project.infoType)}
-                  style={{marginTop: 0}}
-                >
-                  More Details
-                </button>
+                {idx % 2 === 0 ? (
+                  <button
+                    className="info-btn portfolio-action-btn"
+                    onClick={() => onInfoClick(project.infoType)}
+                    style={{marginTop: 0}}
+                  >
+                    More Details
+                  </button>
+                ) : (
+                  <button
+                    className="info-btn portfolio-action-btn"
+                    onClick={() => onSidebarToggle && onSidebarToggle(project.infoType)}
+                    style={{marginTop: 0}}
+                  >
+                    More Details
+                  </button>
+                )}
               </div>
             </div>
           ))}
