@@ -34,7 +34,7 @@ const projects = [
   {
     title: "Blog Platform",
     description: "A simple blogging platform with markdown support and user accounts.",
-    image: "/public/background.avif",
+    image: "/public/test.png",
     source: "https://github.com/yourusername/blog",
     website: "https://blog.example.com",
     infoType: "blog"

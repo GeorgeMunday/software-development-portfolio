@@ -44,9 +44,9 @@ const AboutMain = ({ onSidebarToggle, onInfoClick }) => {
           <div className="info-section">
             <h2>Skills</h2>
             <p>React, Node.js, JavaScript, CSS, and more</p>
-            <button 
-              className="info-btn" 
-              onClick={() => onSidebarToggle('skills')}
+            <button
+              className="info-btn"
+              onClick={() => onSidebarToggle && onSidebarToggle('skills')}
             >
               View Skills
             </button>
@@ -58,7 +58,7 @@ const AboutMain = ({ onSidebarToggle, onInfoClick }) => {
             <p>Computer Science Degree from XYZ University</p>
             <button 
               className="info-btn" 
-              onClick={() => onSidebarToggle('education')}
+              onClick={() => onInfoClick('education')}
             >
               View Education
             </button>
@@ -68,9 +68,9 @@ const AboutMain = ({ onSidebarToggle, onInfoClick }) => {
           <div className="info-section">
             <h2>Contact</h2>
             <p>Get in touch for opportunities</p>
-            <button 
-              className="info-btn" 
-              onClick={() => onInfoClick('contact')}
+            <button
+              className="info-btn"
+              onClick={() => onSidebarToggle && onSidebarToggle('Contact')}
             >
               Quick Contact
             </button>

@@ -4,38 +4,29 @@ import './styles/header-buttons.css';
 import './styles/info-section.css';
 import './styles/buttons.css';
 import './styles/typography.css';
+import './styles/css/contact-form.css';
 
 const ContactMain = ({ onSidebarToggle, onInfoClick }) => {
   return (
     <div className="about-container">
-      <div className="about-header">
-        <h1>Contact</h1>
-        <div className="header-buttons">
-          <button 
-            className="sidebar-toggle-btn" 
-            onClick={() => onSidebarToggle('contact')}
-          >
-            ☰ Details
-          </button>
-          <button 
-            className="infobar-toggle-btn" 
-            onClick={() => onInfoClick('contact')}
-          >
-            ℹ Info
-          </button>
-        </div>
-      </div>
       <div className="about-content">
         <div className="info-sections">
           <div className="info-section">
-            <h2>Get in Touch</h2>
-            <p style={{opacity:0.7}}>This is a placeholder for your contact form or contact details. Add your preferred contact methods here.</p>
-          </div>
-          <div className="info-section" style={{opacity:0.4}}>
-            <p>Mockup Section</p>
-          </div>
-          <div className="info-section" style={{opacity:0.4}}>
-            <p>Mockup Section</p>
+            <form className="contact-form">
+              <label>
+                Name
+                <input type="text" placeholder="Your Name" />
+              </label>
+              <label>
+                Email
+                <input type="email" placeholder="you@email.com" />
+              </label>
+              <label>
+                Message
+                <textarea placeholder="Say hello!" rows={4} />
+              </label>
+              <button type="submit" className="info-btn mellow-btn">Send Message</button>
+            </form>
           </div>
         </div>
       </div>

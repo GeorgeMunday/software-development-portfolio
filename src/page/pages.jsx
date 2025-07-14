@@ -57,7 +57,8 @@ export default function Page() {
         return (
           <AboutMain 
             onSidebarToggle={handleSidebarToggle}
-            onInfoClick={handleInfoClick} 
+            onInfoClick={handleInfoClick}
+            setPage={setCurrentPage}
           />
         );
       case 'Resume':
@@ -70,7 +71,8 @@ export default function Page() {
         return (
           <AboutMain 
             onSidebarToggle={handleSidebarToggle}
-            onInfoClick={handleInfoClick} 
+            onInfoClick={handleInfoClick}
+            setPage={setCurrentPage}
           />
         );
     }

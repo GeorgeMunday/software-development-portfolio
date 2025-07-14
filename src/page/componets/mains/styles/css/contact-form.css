@@ -1,0 +1,58 @@
+/* Contact Form Styles - matches site look */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.5rem;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem;
+}
+.contact-form label {
+  font-weight: 600;
+  font-size: 1.08rem;
+  letter-spacing: 0.2px;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.85rem 1rem;
+  border-radius: 0.7rem;
+  border: 1.2px solid #bdbdbd;
+  margin-top: 0.4rem;
+  font-size: 1.05rem;
+  background: transparent;
+  font-weight: 500;
+  outline: none;
+  transition: border 0.2s;
+  align-self: stretch;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1.2px solid #7e57c2;
+  background: #fff;
+}
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.contact-form .info-btn.mellow-btn {
+  align-self: flex-end;
+  min-width: 140px;
+  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-top: 0.5rem;
+  margin-left: auto;
+}

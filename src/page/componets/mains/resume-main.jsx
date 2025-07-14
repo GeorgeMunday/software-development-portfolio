@@ -10,20 +10,6 @@ const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
     <div className="about-container">
       <div className="about-header">
         <h1>Resume</h1>
-        <div className="header-buttons">
-          <button
-            className="sidebar-toggle-btn"
-            onClick={() => onSidebarToggle("resume")}
-          >
-            ☰ Details
-          </button>
-          <button
-            className="infobar-toggle-btn"
-            onClick={() => onInfoClick("resume")}
-          >
-            ℹ Info
-          </button>
-        </div>
       </div>
       <div className="about-content">
         <div className="info-sections">
@@ -32,13 +18,27 @@ const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
             <ul>
               <li>
                 <strong>Senior Developer</strong> at ABC Corp (2021–2025)
-                <br />- Led a team building scalable web apps with React and
-                Node.js.
+                <br />- Led a team building scalable web apps with React and Node.js.
+                <br />
+                <button
+                  className="sidebar-toggle-btn"
+                  onClick={() => onSidebarToggle("resume")}
+                  style={{ marginTop: '0.5rem' }}
+                >
+                  ☰ Details
+                </button>
               </li>
               <li>
                 <strong>Frontend Engineer</strong> at XYZ Inc (2018–2021)
-                <br />- Developed modern UIs and improved accessibility for
-                enterprise clients.
+                <br />- Developed modern UIs and improved accessibility for enterprise clients.
+                <br />
+                <button
+                  className="sidebar-toggle-btn"
+                  onClick={() => onSidebarToggle("resume")}
+                  style={{ marginTop: '0.5rem' }}
+                >
+                  ☰ Details
+                </button>
               </li>
             </ul>
           </div>
@@ -55,6 +55,13 @@ const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
           </div>
           <div className="info-section">
             <h2>Skills</h2>
+            <button
+              className="infobar-toggle-btn"
+              onClick={() => onInfoClick("resume")}
+              style={{ marginBottom: '0.5rem' }}
+            >
+              ℹ Info
+            </button>
             <ul>
               <li>React, JavaScript, TypeScript</li>
               <li>Node.js, Express</li>
@@ -62,6 +69,15 @@ const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
               <li>MongoDB, SQL</li>
               <li>Git, CI/CD, Agile</li>
             </ul>
+          </div>
+          <div className="info-section" style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+            <a
+              className="info-btn mellow-btn download-cv-btn"
+              href="/public/GeorgeMundayCV.pdf"
+              download
+            >
+              ⬇ Download CV
+            </a>
           </div>
         </div>
       </div>
