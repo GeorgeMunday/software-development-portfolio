@@ -50,21 +50,21 @@ const PortfolioMain = ({ onSidebarToggle, onInfoClick }) => {
       <div className="about-content">
         <div className="info-sections portfolio-grid">
           {projects.map((project, idx) => (
-            <div className="info-section portfolio-section" key={idx}>
-              <img src={project.image} alt={project.title + ' preview'} className="portfolio-thumb" />
-              <h2>{project.title}</h2>
+            <div className="info-section portfolio-section portfolio-card" key={idx}>
+              <h2 style={{marginBottom: '1rem'}}>{project.title}</h2>
+              <img src={project.image} alt={project.title + ' preview'} className="portfolio-thumb portfolio-thumb-large" />
               <p className="portfolio-desc">{project.description}</p>
-              <div className="portfolio-links">
-                <a href={project.source} target="_blank" rel="noopener noreferrer" className="portfolio-link-btn">Source Code</a>
-                <a href={project.website} target="_blank" rel="noopener noreferrer" className="portfolio-link-btn">Website</a>
+              <div className="portfolio-links portfolio-actions-row">
+                <a href={project.source} target="_blank" rel="noopener noreferrer" className="portfolio-link-btn portfolio-action-btn">Source Code</a>
+                <a href={project.website} target="_blank" rel="noopener noreferrer" className="portfolio-link-btn portfolio-action-btn">Website</a>
+                <button 
+                  className="info-btn portfolio-action-btn" 
+                  onClick={() => onInfoClick(project.infoType)}
+                  style={{marginTop: 0}}
+                >
+                  More Details
+                </button>
               </div>
-              <button 
-                className="info-btn" 
-                onClick={() => onInfoClick(project.infoType)}
-                style={{marginTop: '1.2rem'}}
-              >
-                More Details
-              </button>
             </div>
           ))}
         </div>
