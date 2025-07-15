@@ -28,7 +28,7 @@ const projects = [
   {
     title: "Pathfinder Visualizer",
     description: "simple pathfinding algorithm visualizer made in pyhton.",
-    image: "OIP.webp",
+    image: "path.png",
     source: "https://github.com/GeorgeMunday/path-finder",
     website: "",
     hasWebsite: false,
@@ -37,7 +37,7 @@ const projects = [
   {
     title: "C# calculator app",
     description: "A simple calculator app made in C#.",
-    image: "stock1.webp",
+    image: "calc.png",
     source: "ahttps://github.com/GeorgeMunday/Calculator",
     website: "",
     hasWebsite: false,

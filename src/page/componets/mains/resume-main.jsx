@@ -47,7 +47,7 @@ const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
             <h2 className="resume-section-title">Education</h2>
             <ul className="resume-list">
               <li>
-                <strong>T Level in Digital Production, Design & Development</strong>, York College (2023–2025)
+                <strong>T Level in Digital Production, Design & Development</strong>, York College (2024–2026)
                 <ul>
                   <li>Specialized in software development, digital project management, and UI/UX design.</li>
                   <li>Completed industry placement, developed real-world web applications, and collaborated with teams.</li>
@@ -58,7 +58,7 @@ const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
                 a bit more on what I did
               </button>
               <li>
-                <strong>9 GCSEs</strong> (2021–2023)
+                <strong>9 GCSEs</strong> (2022–2024)
                 <ul>
                   <li>Triple Science (Biology, Chemistry, Physics)</li>
                   <li>Mathematics</li>

@@ -33,10 +33,10 @@ export default function Header({ currentPage, setPage }) {
             <button className="header__nav--button1" onClick={() => setPage('Home')}>Home</button>
           </li>
           <li className="header__nav--item">
-            <button className="header__nav--button1" onClick={() => setPage('Resume')}>Resume</button>
+            <button className="header__nav--button1" onClick={() => setPage('Expirence')}>Expirence</button>
           </li>
           <li className="header__nav--item">
-            <button className="header__nav--button1" onClick={() => setPage('Portfolio')}>Portfolio</button>
+            <button className="header__nav--button1" onClick={() => setPage('Projects')}>Projects</button>
           </li>
           <li className="header__nav--item">
             <button className="header__nav--button4" onClick={() => setPage('Contact')}>Contact</button>

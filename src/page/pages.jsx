@@ -61,9 +61,9 @@ export default function Page() {
             setPage={setCurrentPage}
           />
         );
-      case 'Resume':
+      case 'Expirence':
         return <ResumeMain onSidebarToggle={handleSidebarToggle} onInfoClick={handleInfoClick} />;
-      case 'Portfolio':
+      case 'Projects':
         return <Portfolio onSidebarToggle={handleSidebarToggle} onInfoClick={handleInfoClick} />;
       case 'Contact':
         return <ContactMain onSidebarToggle={handleSidebarToggle} onInfoClick={handleInfoClick} />;

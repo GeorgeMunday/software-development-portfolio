@@ -37,7 +37,7 @@ const HomeMain = ({ onSidebarToggle,setPage }) => {
             <p>brief description</p>
             <button 
               className="info-btn" 
-              onClick={() => setPage && setPage('Resume')}
+              onClick={() => setPage && setPage('Expirence')}
             >
               Learn More
             </button>
@@ -74,7 +74,7 @@ const HomeMain = ({ onSidebarToggle,setPage }) => {
             </div>
             <button
               className="info-btn"
-              onClick={() => setPage && setPage('Portfolio')}
+              onClick={() => setPage && setPage('Projects')}
             >
               View Projects
             </button>
@@ -87,7 +87,7 @@ const HomeMain = ({ onSidebarToggle,setPage }) => {
             <p>9 GCSEs</p>
             <button 
               className="info-btn" 
-              onClick={() => setPage && setPage('Resume')}
+              onClick={() => setPage && setPage('Expirence')}
             >
               More Info
             </button>
