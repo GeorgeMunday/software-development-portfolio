@@ -5,6 +5,7 @@ import './styles/info-section.css';
 import './styles/buttons.css';
 import './styles/typography.css';
 import './styles/css/contact-form.css';
+import './styles/responsive.css';
 
 const ContactMain = ({ onSidebarToggle, onInfoClick }) => {
   return (

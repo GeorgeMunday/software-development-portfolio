@@ -76,9 +76,23 @@
 .sidebar-overlay.fancy-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgba(20, 20, 30, 0.32);
-  z-index: 1100;
+  z-index: 1400;
   animation: fadeIn 0.3s;
+}
+
+@media (max-width: 700px) {
+  .sidebar-overlay.fancy-overlay {
+    width: 100vw !important;
+    height: 100vh !important;
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 1400 !important;
+  }
 }
 @keyframes fadeIn {
   from { opacity: 0; }

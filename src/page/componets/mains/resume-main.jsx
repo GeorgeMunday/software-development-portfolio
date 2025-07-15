@@ -5,6 +5,7 @@ import './styles/info-section.css';
 import './styles/buttons.css';
 import './styles/typography.css';
 import './styles/resume.css';
+import './styles/responsive.css';
 
 const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
   return (

@@ -6,6 +6,7 @@ import './styles/info-section.css';
 import './styles/buttons.css';
 import './styles/typography.css';
 import './styles/skills-icons.css';
+import './styles/responsive.css';
 
 const HomeMain = ({ onSidebarToggle,setPage }) => {
   return (

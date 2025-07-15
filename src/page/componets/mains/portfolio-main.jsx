@@ -5,6 +5,7 @@ import './styles/info-section.css';
 import './styles/portfolio.css';
 import './styles/buttons.css';
 import './styles/typography.css';
+import './styles/responsive.css';
 
 const projects = [
   {
