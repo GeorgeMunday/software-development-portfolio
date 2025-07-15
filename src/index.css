@@ -18,6 +18,8 @@ body {
 
   /* Match main-content glassmorphic palette and direction */
   background: linear-gradient(120deg, #2c3e50 0%, #23243a 40%, #1a1a2e 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   overflow-x: hidden;
 }

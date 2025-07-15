@@ -1,50 +1,194 @@
-/* Responsive styles for main content and sections */
-@media (max-width: 900px) {
-  .main-content {
-    padding: 1.5rem 0.7rem;
-    max-width: 98vw;
-    min-height: 400px;
-    margin: 0 auto !important;
+/* Responsive fixes for sidebar, infobar, main content, and header */
+
+@media (max-width: 1200px) {
+  .main-content, .about-container, .header, .header__nav--list, .header__nav--button1, .header__nav--button4 {
+    max-width: 90vw;
   }
-}
-@media (max-width: 600px) {
-  .main-content {
-    padding: 0.7rem 0.2rem;
-    border-radius: 0;
-    margin: 0 !important;
-    min-height: 300px;
+  .main-content, .about-container {
+    width: 90vw;
     min-width: 0;
+    margin: 0 auto 2rem auto;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    background: transparent;
+  }
+  .header {
+    width: 90vw;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    background: transparent;
   }
 }
-@media (max-width: 1024px) {
-  .main-content,
-  .main-content.sidebar-open,
-  .main-content.infobar-open {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+
+@media (max-width: 900px) {
+  .main-content, .about-container, .header, .header__nav--list, .header__nav--button1, .header__nav--button4 {
+    max-width: 90vw;
+  }
+  .main-content, .about-container {
+    width: 98vw;
+    min-width: 0;
+    padding: 1rem 0.5rem;
+    box-sizing: border-box;
+    background: transparent;
+  }
+  .header {
+    width: 98vw;
+    min-width: 0;
+    padding: 0.5rem 0.5rem;
+    box-sizing: border-box;
+    background: transparent;
+  }
+  .infobar {
+    right: -100vw;
+  }
+  .infobar.open {
+    right: 0;
   }
 }
-@media (max-width: 768px) {
-  .main-content.sidebar-open,
-  .main-content.infobar-open {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+
+@media (max-width: 600px) {
+  .main-content, .about-container, .header, .header__nav--list, .header__nav--button1, .header__nav--button4 {
+    max-width: 90vw;
   }
-  .main-content {
-    padding: 1rem;
+  .main-content, .about-container, .header {
+    width: 100vw;
+    min-width: 0;
+    padding: 0.5rem 0.2rem;
+    box-sizing: border-box;
+    background: transparent;
+  }
+  .main-content, .about-container {
+    min-height: 100vh;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    padding: 0.5rem 0.2rem;
+  }
+  .sidebar {
+    width: 100vw;
+    min-width: 0;
+    border-radius: 0;
+    left: 0;
+    top: 0;
+    height: 100vh;
+  }
+  .infobar {
+    width: 100vw;
+    min-width: 0;
+    border-radius: 0;
+    right: -100vw;
+    top: 0;
+    height: 100vh;
+  }
+  .infobar.open {
+    right: 0;
   }
 }
-@media (max-width: 700px) {
-  .about-container, .main-content {
-    padding: 1.2rem 0.5rem;
-    min-height: 400px;
-  }
-  .info-section {
-    padding: 1.2rem 0.7rem;
-  }
-  .about-header, .resume-header {
-    flex-direction: column;
-    align-items: flex-start;
+
+/* Sidebar and Infobar always off-screen unless open, fully hidden with display:none */
+.sidebar {
+  display: none;
+  transform: translateX(-100%);
+  transition: transform 0.45s cubic-bezier(.77,0,.18,1), box-shadow 0.3s;
+}
+.sidebar.open {
+  display: block;
+  transform: translateX(0);
+}
+.infobar {
+  display: none;
+  right: -380px;
+  transition: right 0.45s cubic-bezier(.77,0,.18,1), box-shadow 0.3s;
+}
+.infobar.open {
+  display: block;
+  right: 0;
+}
+
+/* Make images and grids responsive */
+img, .portfolio-thumb, .skills-icons-list img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-grid, .info-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid, .info-sections {
     gap: 1rem;
   }
 }
+
+/* Responsive buttons - keep style but adapt size and spacing only */
+.header__nav--button1, .header__nav--button4, .info-btn, .resume-sidebar-btn, .download-cv-btn {
+  font-size: 1.1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 1.2rem;
+  min-width: 120px;
+  max-width: 90vw;
+  box-sizing: border-box;
+  transition: font-size 0.2s, padding 0.2s;
+  background: linear-gradient(90deg, #fcb69f 0%, #ffecd2 100%);
+  color: #2c3e50;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+}
+.header__nav--button1:hover, .header__nav--button4:hover, .info-btn:hover, .resume-sidebar-btn:hover, .download-cv-btn:hover {
+  background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
+  color: #23243a;
+  box-shadow: 0 8px 32px 0 rgba(252,182,159,0.18), 0 2.5px 16px 0 rgba(44,62,80,0.13);
+}
+
+@media (max-width: 900px) {
+  .header__nav--button1, .header__nav--button4, .info-btn, .resume-sidebar-btn, .download-cv-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__nav--button1, .header__nav--button4, .info-btn, .resume-sidebar-btn, .download-cv-btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem;
+    min-width: 80px;
+    width: 100%;
+    max-width: 90vw;
+    margin-bottom: 0.5rem;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .header {
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+    border-radius: 0 0 16px 16px;
+    margin-bottom: 0 !important; /* Remove gap below header on tablet */
+  }
+  .header__nav--list {
+    gap: 1.2rem;
+    padding: 0.3rem 0.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    padding: 0.7rem 0.2rem 0.5rem 0.2rem;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 0 !important; /* Remove gap below header on mobile */
+  }
+  .header__title--text {
+    font-size: 1.5rem;
+  }
+}
+
