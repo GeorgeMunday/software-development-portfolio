@@ -49,14 +49,11 @@ const projects = [
 const PortfolioMain = ({ onSidebarToggle, onInfoClick }) => {
   return (
     <div className="about-container">
-      <div className="about-header">
-        <h1>Projects</h1>
-      </div>
-      <div className="about-content">
-        <div className="info-sections portfolio-grid">
+      <div className="about-content" >
+        <div className="info-sections portfolio-grid portfolio-center">
           {projects.map((project, idx) => (
-            <div className="info-section portfolio-section portfolio-card" key={idx}>
-              <h2 style={{marginBottom: '1rem'}}>{project.title}</h2>
+            <div className="info-section portfolio-section portfolio-card portfolio-card-center portfolio-card-fullwidth" key={idx}>
+              <h2 className="portfolio-title">{project.title}</h2>
               <img src={project.image} alt={project.title + ' preview'} className="portfolio-thumb portfolio-thumb-large" />
               <p className="portfolio-desc">{project.description}</p>
               <div className="portfolio-links portfolio-actions-row">
