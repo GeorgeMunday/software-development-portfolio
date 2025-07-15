@@ -1,3 +1,28 @@
+/* About page experience list styling */
+.about-exp-list {
+  margin: 1.1rem 0 0.7rem 0.2rem;
+  padding-left: 1.2rem;
+  font-size: 1.08rem;
+  color: #e0e0e0;
+  list-style: disc inside;
+}
+.about-exp-list > li {
+  margin-bottom: 1.2rem;
+}
+.about-exp-list ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  font-size: 1.01rem;
+  color: #c7c7c7;
+  list-style: circle inside;
+}
+.about-exp-date {
+  color: #fcb69f;
+  font-weight: 600;
+  font-size: 0.98em;
+  margin-left: 0.5em;
+}
 /* Info section and content styles */
 .about-content, .info-sections {
   width: 100%;

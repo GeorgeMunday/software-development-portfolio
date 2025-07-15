@@ -1,4 +1,5 @@
 import React from 'react';
+import SkillsIcons from '../skills-icons';
 import './styles/layout.css';
 import './styles/header-buttons.css';
 import './styles/info-section.css';
@@ -31,10 +32,20 @@ const HomeMain = ({ onSidebarToggle,setPage }) => {
           {/* Experience Section - block style */}
           <div className="info-section resume-section-bg">
             <h2 className="resume-section-title">Work Experience</h2>
-            <p>Dedalus - march 2025</p>
-            <p>brief description</p>
-            <p>Mcdonalds - september 2024</p>
-            <p>brief description</p>
+            <ul className="about-exp-list">
+              <li>
+                <strong>Dedalus</strong> <span className="about-exp-date">(March 2025)</span>
+                <ul>
+                  <li>Six-month internship learning real-world web development.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>McDonald's</strong> <span className="about-exp-date">(September 2024)</span>
+                <ul>
+                  <li>Worked in a fast-paced environment, strengthening time management and organization.</li>
+                </ul>
+              </li>
+            </ul>
             <button 
               className="info-btn" 
               onClick={() => setPage && setPage('Expirence')}
@@ -46,32 +57,7 @@ const HomeMain = ({ onSidebarToggle,setPage }) => {
           {/* Skills Section - block style */}
           <div className="info-section resume-section-bg">
             <h2 className="resume-section-title">Skills</h2>
-            <div className="skills-icons-list">
-              <span title="React" className="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" height="36" />
-              </span>
-              <span title="Node.js" className="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" height="36" />
-              </span>
-              <span title="JavaScript" className="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" height="36" />
-              </span>
-              <span title="CSS3" className="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" height="36" />
-              </span>
-              <span title="HTML5" className="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" height="36" />
-              </span>
-              <span title="TypeScript" className="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" height="36" />
-              </span>
-              <span title="Git" className="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" height="36" />
-              </span>
-              <span title="Figma" className="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" height="36" />
-              </span>
-            </div>
+            <SkillsIcons />
             <button
               className="info-btn"
               onClick={() => setPage && setPage('Projects')}
