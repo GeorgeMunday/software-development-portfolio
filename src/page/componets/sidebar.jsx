@@ -8,16 +8,6 @@ import ContactSidebar from './side/ContactSidebar';
 const Sidebar = ({ isOpen, onClose, contentType }) => {
   const sidebarRef = useRef(null);
 
-  // Keyboard accessibility: close on Escape
-  useEffect(() => {
-    if (!isOpen) return;
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') onClose();
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, onClose]);
-
   // Focus trap for accessibility (simple version)
   useEffect(() => {
     if (isOpen && sidebarRef.current) {
@@ -51,11 +41,8 @@ const Sidebar = ({ isOpen, onClose, contentType }) => {
             </button>
             {sidebarContent[contentType] || (
               <div className="sidebar-content">
-                <div className="sidebar__title">
-                  <div className="sidebar__title--img avatar-gradient">👨‍💻</div>
-                  <h1 className="sidebar__title--text">George Munday</h1>
-                  <p className="sidebar__title--subtitle">Web Developer</p>
-                </div>
+                <h3>Information</h3>
+                <p>Select an item to view details.</p>
               </div>
             )}
           </>
