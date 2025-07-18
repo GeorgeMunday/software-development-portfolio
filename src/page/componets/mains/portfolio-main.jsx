@@ -36,6 +36,15 @@ const projects = [
     infoType: "portfolio"
   },
   {
+    title: "Gender prediction based on data",
+    description: "My first time using machine learning to predict",
+    image: "calc.png",
+    source: "ahttps://github.com/GeorgeMunday/female-male-predictor",
+    website: "",
+    hasWebsite: false,
+    infoType: "blog"
+  },
+  {
     title: "C# calculator app",
     description: "A simple calculator app made in C#.",
     image: "calc.png",
