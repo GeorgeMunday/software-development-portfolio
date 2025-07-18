@@ -63,8 +63,8 @@
   border-radius: 0;
   margin-bottom: 0;
   position: relative;
-  z-index: 2000;
   padding: 2.5rem 2rem 1.5rem 2rem;
+  z-index: 1;
   /* No border, no shadow */
 }
 

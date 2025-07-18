@@ -24,7 +24,7 @@ const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
               </li>
             <button
               className="resume-sidebar-btn"
-              onClick={() => onSidebarToggle && onSidebarToggle('resume')}
+              onClick={() => onSidebarToggle && onSidebarToggle('about')}
             >
               a bit more on what I did
             </button>
@@ -37,7 +37,7 @@ const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
               </li>
               <button
                 className="resume-sidebar-btn"
-                onClick={() => onSidebarToggle && onSidebarToggle('resume')}
+                onClick={() => onSidebarToggle && onSidebarToggle('portfolio')}
               >
                 a bit more on what I did
               </button>
@@ -55,7 +55,7 @@ const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
                   <li>Key skills: JavaScript, React, Agile, Figma, teamwork, and communication.</li>
                 </ul>
               </li>
-              <button className="resume-sidebar-btn" onClick={() => onInfoClick && onInfoClick('education')}>
+              <button className="resume-sidebar-btn" onClick={() => onInfoClick && onInfoClick('ecommerce')}>
                 a bit more on what I did
               </button>
               <li>
@@ -69,7 +69,7 @@ const ResumeMain = ({ onSidebarToggle, onInfoClick }) => {
                   <li>Astronomy</li>
                 </ul>
               </li>
-              <button className="resume-sidebar-btn" onClick={() => onInfoClick && onInfoClick('education')}>
+              <button className="resume-sidebar-btn" onClick={() => onInfoClick && onInfoClick('about')}>
                 a bit more on what I did
               </button>
             </ul>
